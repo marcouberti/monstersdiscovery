@@ -1,16 +1,15 @@
 package com.invenktion.monstersdiscovery.view;
 
 import com.invenktion.monstersdiscovery.DrawChallengeActivity;
+import com.invenktion.monstersdiscovery.R;
 import com.invenktion.monstersdiscovery.bean.AmmoBean;
 import com.invenktion.monstersdiscovery.bean.PictureBean;
 import com.invenktion.monstersdiscovery.core.AmmoManager;
 import com.invenktion.monstersdiscovery.core.AnimationFactory;
 import com.invenktion.monstersdiscovery.core.ApplicationManager;
 import com.invenktion.monstersdiscovery.core.TimeManager;
-import com.invenktion.monstersdiscovery.R;
 import com.invenktion.monstersdiscovery.utils.ColorUtils;
 import com.invenktion.monstersdiscovery.utils.FilterUtils;
-import com.samsung.spen.settings.SettingStrokeInfo;
 
 import android.content.Context;
 import android.graphics.*;
@@ -115,14 +114,11 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
         //mBlur = new BlurMaskFilter(8, BlurMaskFilter.Blur.NORMAL);
         //mPaint.setMaskFilter(mEmboss);
         //mPaint.setMaskFilter(mBlur);
-        
-        
-        //######### MUB S CANVAS NON RICHIEDE QUESTO LISTENER
-        //setOnTouchListener(this);
+        setOnTouchListener(this);
 	}
 
     public void recycleBitmaps() {
-    	
+
     	////Log.d("RECICLO FINGER BITMPA","##################");
 		if(contour != null && !contour.isRecycled()) {
 			contour.recycle();
@@ -148,14 +144,7 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 			resultBitmap.recycle();
 			resultBitmap = null;
 		}
-		if(appendBitmap != null && !appendBitmap.isRecycled()) {
-			appendBitmap.recycle();
-			appendBitmap = null;
-		}
-		if(backgroundBtm != null && !backgroundBtm.isRecycled()) {
-			backgroundBtm.recycle();
-			backgroundBtm = null;
-		}
+		
 		System.gc();
 		
 	}
@@ -198,7 +187,6 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 		this.mPaint.setColor(picture.getColors()[0]);
 		this.fillPaint.setColor(picture.getColors()[0]);
 		ApplicationManager.setCurrentColor(picture.getColors()[0]);
-		changeSPENColor(picture.getColors()[0]);
 		this.resultComputed = false;
 	}
     
@@ -239,42 +227,11 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
         	mPath.reset();
         }
         
-        //SAMSUNG S PEN SDK, imposto il background del canvas
-        setCenteredBackgroundOnSCanvas(mBitmap,mBitmapPaint,VIEW_HEIGHT,VIEW_HEIGHT);
+        //setto l'immagine di contorno nell'imageview della dashboard
+        if(contourFiltered != null) {
+        	dashboardActivity.contourImage.setImageBitmap(contourFiltered);
+        }
         //NOSystem.gc();
-    }
-    
-    Bitmap backgroundBtm;
-    private void setCenteredBackgroundOnSCanvas(Bitmap bitmap,Paint paint,int W,int H) {
-    	double SW = dashboardActivity.mCanvasView.getWidth();
-        double SH = dashboardActivity.mCanvasView.getHeight();
-        backgroundBtm = Bitmap.createBitmap((int)SW, (int)SH, Bitmap.Config.ARGB_8888);
-        Canvas bgCanvas = new Canvas(backgroundBtm);
-        Rect destRect = new Rect((int)(SW/2 - W/2),(int)(SH/2 - H/2),W+(int)(SW/2 - W/2),H+(int)(SH/2 - H/2));
-        bgCanvas.drawBitmap(bitmap, null,destRect, paint);
-        
-        dashboardActivity.mCanvasView.setBackgroundImage(backgroundBtm);
-        
-        backgroundBtm.recycle();
-        backgroundBtm = null;
-        //bitmap.recycle();
-        //bitmap = null;
-    }
-    
-    Bitmap appendBitmap;
-    private void appendCenteredBitmapOnSCanvas(Bitmap bitmap,Paint paint,int W,int H) {
-    	double SW = dashboardActivity.mCanvasView.getWidth();
-        double SH = dashboardActivity.mCanvasView.getHeight();
-        appendBitmap = dashboardActivity.mCanvasView.getBitmap(true);
-        Canvas bgCanvas = new Canvas(appendBitmap);
-        Rect destRect = new Rect((int)(SW/2 - W/2),(int)(SH/2 - H/2),W+(int)(SW/2 - W/2),H+(int)(SH/2 - H/2));
-        bgCanvas.drawBitmap(bitmap, null,destRect, paint);
-        dashboardActivity.mCanvasView.setBitmap(appendBitmap,true);
-        appendBitmap.recycle();
-        appendBitmap = null;
-        //NB si occupa il chiamante di recycle la bitmap
-        //bitmap.recycle();
-        //bitmap = null;
     }
     
     float percentage = 0f;
@@ -282,34 +239,38 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
  	Bitmap resultBitmap = null;
     @Override
     protected void onDraw(Canvas canvas) {
-    	if(destRect != null) {
+    	if(destRect != null && mBitmap != null && !mBitmap.isRecycled()) {
 			//Qui metterò un effetto dissolvenza del colore al 3,2,1 via, TODO
 	    	//mBitmapPaint.setAlpha(mBitmpaPaintAlpha);
 	    	//L'immagine colorata la facciamo vedere solo all'inizio, dopo no xchè è troppo
 	    	//pesante e il pennello rallenta troppo
-	    	if(coloredFiltered != null && this.mBitmpaPaintAlpha == 255) {
+    		
+	    	if(this.mBitmpaPaintAlpha == 255 && coloredFiltered != null && !coloredFiltered.isRecycled()) {
 	    		//Rect destRect = new Rect(CX-(SCREEN_WIDTH/2),0,CX+(SCREEN_WIDTH/2),SCREEN_HEIGHT);
 	    		canvas.drawBitmap(coloredFiltered, null, destRect, mBitmapPaint);
 	        	//canvas.drawBitmap(coloredFiltered, CX-(SCREEN_WIDTH/2), CY-(SCREEN_WIDTH/2), mBitmapPaint); 
 	        }
+	        
+	        
 	    	//mBitmapPaint.setAlpha(255);
-	    	/* SOSTITUITO DA SPEN SDK SAMSUNG
-	    	if(mBitmap != null) {
+	    	//if(mBitmap != null) {
 	    		//Rect destRect = new Rect(CX-(SCREEN_WIDTH/2),0,CX+(SCREEN_WIDTH/2),SCREEN_HEIGHT);
 	    		canvas.drawBitmap(mBitmap, null, destRect, mBitmapPaint);
 	    		//canvas.drawBitmap(mBitmap, CX-(SCREEN_WIDTH/2), CY-(SCREEN_WIDTH/2), mBitmapPaint);
-	    	}
-	    	*/
+	    	//}
 	    	//Se non è la gomma pitturo direttamente sul canvas
 	    	//if(!(mPaint.getColor() == ApplicationManager.TRANSPARENT_COLOR)) {
 	    		//canvas.drawPath(mPath, mPaint);
 	    	//}
 	        //canvas.drawPath(mPath, mPaint);
+	    	/*
 	        if(contourFiltered != null) {
 	        	//Rect destRect = new Rect(CX-(SCREEN_WIDTH/2),0,CX+(SCREEN_WIDTH/2),SCREEN_HEIGHT);
 	    		canvas.drawBitmap(contourFiltered, null, destRect, mContourPaint);
 	        	//canvas.drawBitmap(contourFiltered, CX-(SCREEN_WIDTH/2), CY-(SCREEN_WIDTH/2), mBitmapPaint); 
 	        }
+	        */
+	        
 	        
 	        //Se il dito del disegnatore è giu disegno la croce di supporto al disegno
 	        /*
@@ -341,12 +302,13 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
         isFingerDown = true;
         //mCanvas.drawOval(new RectF(x-(paintSize/4),y-(paintSize/4),x+(paintSize/4),y+(paintSize/4)), mPaint);
     }
-    private void touch_move(float x, float y,boolean PINCH_ZOOM) {
+    float dx,dy;
+    private void touch_move(float x, float y) {
         
-    	if(PINCH_ZOOM) return;
+    	//if(PINCH_ZOOM) return;
     	
-    	float dx = Math.abs(x - mX);
-        float dy = Math.abs(y - mY);
+    	dx = Math.abs(x - mX);
+        dy = Math.abs(y - mY);
         if (dx >= TOUCH_TOLERANCE || dy >= TOUCH_TOLERANCE) {
             mPath.quadTo(mX, mY, (x + mX)/2, (y + mY)/2);
             //mPath.lineTo(x,y);
@@ -366,10 +328,10 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
         //fingerX = (int)x;
         //fingerY = (int)y;
     }
-    private void touch_up(boolean afterPinchZoom) {
-    	if(!afterPinchZoom) {
-    		mPath.lineTo(mX+1, mY+1);//il +1 serve a fare disegnare i punti (toccata e fuga)
-    	}
+    private void touch_up() {
+    	
+    	mPath.lineTo(mX+1, mY+1);//il +1 serve a fare disegnare i punti (toccata e fuga)
+    	
         // commit the path to our offscreen
         mCanvas.drawPath(mPath, mPaint);
         // kill this so we don't double draw
@@ -378,37 +340,50 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
         isFingerDown = false;
     }
 
-    private boolean PINCH_ZOOM = false;
+    float x,y;
+    int PAINT_SIZE;
+    int left,top,right,bottom;
 	public boolean onTouch(View v, MotionEvent event) {
     	 if(showResult) {
     	 	 return false;
     	 }
     	 ////Log.d("","event: "+event.getAction());
-		 float x = event.getX();///touchNormalization;
-	     float y = event.getY();///touchNormalization;
+		 x = event.getX();///touchNormalization;
+	     y = event.getY();///touchNormalization;
+	     PAINT_SIZE = ApplicationManager.getPaintSize();
+	     
+	     //Log.d("","x: "+x+" y:"+y+" mx:"+mX+" mY:"+mY);
+	     
+	     if(x > mX) {
+	    	 right = (int)x;
+	    	 left = (int)mX; 
+	     }else {
+	    	 right = (int)mX;
+	    	 left = (int)x; 
+	     }
+	     
+	     if(y > mY) {
+	    	 top = (int)mY;
+	    	 bottom = (int)y; 
+	     }else {
+	    	 top = (int)y;
+	    	 bottom = (int)mY; 
+	     }
 	     
 	     switch (event.getAction()) {
 	         case MotionEvent.ACTION_DOWN:
 	             touch_start(x, y);
-	             invalidate();
+	             invalidate((int)(left-PAINT_SIZE),(int)(top-PAINT_SIZE),(int)(right+PAINT_SIZE),(int)(bottom+PAINT_SIZE));
 	             break;
 	         case MotionEvent.ACTION_MOVE:
-	        	 /*
-	        	 if(event.getPointerCount() == 2) {//sto usando 2 dita
-	        		 PINCH_ZOOM = true;
-	        		 computePinchZoom(event);
-	        	 }else {
-	        	 */
-	        		 touch_move(x, y,PINCH_ZOOM);
-	        	 //}
-	             invalidate();
+	        	 touch_move(x, y);
+	        	 invalidate((int)(left-PAINT_SIZE),(int)(top-PAINT_SIZE),(int)(right+PAINT_SIZE),(int)(bottom+PAINT_SIZE));
 	             break;
 	         case MotionEvent.ACTION_UP://N.B. se sono con 2 dita, questo non viene lanciato al primo dito rilasciato,ma al secondo
-	             touch_up(PINCH_ZOOM);
-	             PINCH_ZOOM = false;
+	             touch_up();
 	             ApplicationManager.setShowPaintSize(false);
 	             //ApplicationManager.refreshGlashPane();
-	             invalidate();
+	             invalidate((int)(left-PAINT_SIZE),(int)(top-PAINT_SIZE),(int)(right+PAINT_SIZE),(int)(bottom+PAINT_SIZE));
 	             break;
 	     }
 	     return true;
@@ -452,7 +427,7 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
    	 
    	 	//Applico l'immagine giusta al pennello
    	    //if(ApplicationManager.TOOL_PENNELLO.equalsIgnoreCase(ApplicationManager.getTOOL())) {
-   	   /*
+   	    /*
    	    if(true) {
    	    	ApplicationManager.getPENNELLO_ICON().setPaintSize(paintSize);
 	    	if(paintSize >=6 && paintSize<=10) {
@@ -489,7 +464,8 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 			}
         	ApplicationManager.setGommaPaintSize((int)(paintSize*DENSITY +0.5f));
    	    }
-	*/
+   	    */
+
     	ApplicationManager.setShowPaintSize(true);
     	//ApplicationManager.refreshGlashPane();
 	}
@@ -518,19 +494,16 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 	        	 //resultComputed = false;
 	        }
     };
-    
-    Bitmap fullCanvasS;
     public void startResultElaboration() {
     	if(elaborationRunning) return;
     	elaborationRunning = true;
     	isFingerDown = false;
     	
     	//Prima del calcolo concludo il path in corso e lo disegno sulla bitmap
-    	//mCanvas.drawPath(mPath, mPaint);
+    	mCanvas.drawPath(mPath, mPaint);
         // kill this so we don't double draw
-        //mPath.reset();
+        mPath.reset();
     	
-    	fullCanvasS = dashboardActivity.mCanvasView.getBitmap(true);
     	////Log.e("################# startResultElaboration ","startResultElaboration");
         // Fire off a thread to do some work that we shouldn't do directly in the UI thread
         Thread t = new Thread() {
@@ -542,24 +515,9 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 	     	        		
 	     	        		//Ridimensiono le bitmap in gioco a una grandezza fissa stabilita (ad esempio 300x300),cosi
 	     	        		//velocizziamo l'algoritmo e possiamo cablare il kernel size affinchè funzioni sempre a dovere.
-	     	        		//Bitmap scaledMBitmap = Bitmap.createScaledBitmap(mBitmap, ELABORATION_SIZE, ELABORATION_SIZE, false);
-	     	        		//SE USO L'S PEN CANVAS A PIENO SCHERMO DEVO RITAGLIARE LA PARTE DI INTERESSE
-	     	        		double SW = fullCanvasS.getWidth();
-	     	        		double SH = fullCanvasS.getHeight();
-	     	        		double sw = getWidth();
-	     	        		double sh = getHeight();
-	     	        		Bitmap croppedCanvas = Bitmap.createBitmap(fullCanvasS, (int)(SW/2 - sw/2), (int)(SH/2 - sh/2), (int)sw, (int)sh);
-	     	        		fullCanvasS.recycle();//gc
-	     	        		fullCanvasS = null;//gc
-	     	        		
-	     	        		Bitmap scaledMBitmap = Bitmap.createScaledBitmap(croppedCanvas, ELABORATION_SIZE, ELABORATION_SIZE, false);
+	     	        		Bitmap scaledMBitmap = Bitmap.createScaledBitmap(mBitmap, ELABORATION_SIZE, ELABORATION_SIZE, false);
 	     	        		Bitmap scaledColored = colored;
 	     	        		Bitmap scaledContour = contour;
-	     	        		
-	     	        		if(scaledMBitmap != croppedCanvas) {
-	     	        			croppedCanvas.recycle();//gc
-	     	        			croppedCanvas = null;//gc
-	     	        		}
 	     	        		
 	    	 		        //Provo ad analizzare le bitmap per il confronto
 	    	 		        //PASSO 1 Unisco il disegno dell'utente con il contorno originale per formare l'immagine finale dell'utente
@@ -631,12 +589,9 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 	    		    	    elaborationRunning = false;
 	    		    	    
 	    		    	    //Rilascio le bitmpap temporanee
-	    		    	    if(scaledMBitmap != croppedCanvas) {
+	    		    	    if(scaledMBitmap != mBitmap) {
 	    		    	    	scaledMBitmap.recycle();
 	    		    	    	scaledMBitmap = null;
-	    		    	    }else {
-	    		    	    	croppedCanvas.recycle();
-	    		    	    	croppedCanvas = null;
 	    		    	    }
 	    		    	    //scaledColored.recycle();
 	    		    	    //scaledContour.recycle();
@@ -656,7 +611,7 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
         t.start();
     }
 
-    public void executeAmmo(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
+public void executeAmmo(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
     	
     	if(elaborationRunning) return;
     	
@@ -702,10 +657,6 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
     Paint circlePaint = new Paint();
     //La bomba piccola colora un cerchio grande 70dp.
 	private void executeSmallBomb(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
-		
-		//NB imageDimension indica la dimensione del TRICK&TRAP a video, quindi serve per centrare la bomba
-		//	 al centro del TRICK&TRAP apparso, altrimenti sta male
-		
 		Bitmap.Config config = Bitmap.Config.ARGB_8888;
 		Bitmap copyOfColoredBitmap = coloredFiltered.copy(config, true);
 		Bitmap trasparentBitmap = Bitmap.createBitmap(coloredFiltered.getWidth(), coloredFiltered.getHeight(), config);
@@ -717,9 +668,11 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 		Canvas coloredMaskCanvas = new Canvas(copyOfColoredBitmap);
 	    ammoPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));//dst_out con maschera inversa dovrebbe funzare
 	    coloredMaskCanvas.drawBitmap(trasparentBitmap, 0, 0, ammoPaint);
-
-	    appendCenteredBitmapOnSCanvas(copyOfColoredBitmap, mBitmapPaint,VIEW_HEIGHT,VIEW_HEIGHT);
-	    copyOfColoredBitmap.recycle();
+	    Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
+	    mCanvas.drawBitmap(copyOfColoredBitmap, null, dst, mBitmapPaint);
+        invalidate();
+        
+        copyOfColoredBitmap.recycle();
         copyOfColoredBitmap=null;
         trasparentBitmap.recycle();
         trasparentBitmap=null;
@@ -728,10 +681,6 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 	
 	//La bomba grande colora un cerchio grande 140dp.
 	private void executeBigBomb(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
-	
-		//NB imageDimension indica la dimensione del TRICK&TRAP a video, quindi serve per centrare la bomba
-		//	 al centro del TRICK&TRAP apparso, altrimenti sta male
-		
 		Bitmap.Config config = Bitmap.Config.ARGB_8888;
 		Bitmap copyOfColoredBitmap = coloredFiltered.copy(config, true);
 		Bitmap trasparentBitmap = Bitmap.createBitmap(coloredFiltered.getWidth(), coloredFiltered.getHeight(), config);
@@ -743,9 +692,11 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 		Canvas coloredMaskCanvas = new Canvas(copyOfColoredBitmap);
 	    ammoPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));//dst_out con maschera inversa dovrebbe funzare
 	    coloredMaskCanvas.drawBitmap(trasparentBitmap, 0, 0, ammoPaint);
-	   
-	    appendCenteredBitmapOnSCanvas(copyOfColoredBitmap, mBitmapPaint,VIEW_HEIGHT,VIEW_HEIGHT);
-	    copyOfColoredBitmap.recycle();
+	    Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
+	    mCanvas.drawBitmap(copyOfColoredBitmap, null, dst, mBitmapPaint);
+        invalidate();
+        
+        copyOfColoredBitmap.recycle();
         copyOfColoredBitmap=null;
         trasparentBitmap.recycle();
         trasparentBitmap=null;
@@ -769,14 +720,16 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 			int randomx =x + randomnumberx;
 			int randomy = y + randomnumbery;
 			
-			traspCanvas.drawCircle((int)(randomx/proportion), (int)(randomy/proportion), (int)((imageDimension/4)/proportion), circlePaint);
+			traspCanvas.drawCircle((int)(randomx/proportion), (int)(randomy/proportion), (int)((imageDimension/8)/proportion), circlePaint);
 		}
 		Canvas coloredMaskCanvas = new Canvas(copyOfColoredBitmap);
 	    ammoPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));//dst_out con maschera inversa dovrebbe funzare
 	    coloredMaskCanvas.drawBitmap(trasparentBitmap, 0, 0, ammoPaint);
-
-	    appendCenteredBitmapOnSCanvas(copyOfColoredBitmap, mBitmapPaint,VIEW_HEIGHT,VIEW_HEIGHT);
-	    copyOfColoredBitmap.recycle();
+	    Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
+	    mCanvas.drawBitmap(copyOfColoredBitmap, null, dst, mBitmapPaint);
+        invalidate();
+        
+        copyOfColoredBitmap.recycle();
         copyOfColoredBitmap=null;
         trasparentBitmap.recycle();
         trasparentBitmap=null;
@@ -801,9 +754,11 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 		Canvas coloredMaskCanvas = new Canvas(copyOfColoredBitmap);
 	    ammoPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));//dst_out con maschera inversa dovrebbe funzare
 	    coloredMaskCanvas.drawBitmap(trasparentBitmap, 0, 0, ammoPaint);
-	   
-	    appendCenteredBitmapOnSCanvas(copyOfColoredBitmap, mBitmapPaint,VIEW_HEIGHT,VIEW_HEIGHT);
-	    copyOfColoredBitmap.recycle();
+	    Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
+	    mCanvas.drawBitmap(copyOfColoredBitmap, null, dst, mBitmapPaint);
+        invalidate();
+        
+        copyOfColoredBitmap.recycle();
         copyOfColoredBitmap=null;
         trasparentBitmap.recycle();
         trasparentBitmap=null;
@@ -832,9 +787,11 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 		Canvas coloredMaskCanvas = new Canvas(copyOfColoredBitmap);
 	    ammoPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));//dst_out con maschera inversa dovrebbe funzare
 	    coloredMaskCanvas.drawBitmap(trasparentBitmap, 0, 0, ammoPaint);
-	   
-	    appendCenteredBitmapOnSCanvas(copyOfColoredBitmap, mBitmapPaint,VIEW_HEIGHT,VIEW_HEIGHT);
-	    copyOfColoredBitmap.recycle();
+	    Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
+	    mCanvas.drawBitmap(copyOfColoredBitmap, null, dst, mBitmapPaint);
+        invalidate();
+        
+        copyOfColoredBitmap.recycle();
         copyOfColoredBitmap=null;
         trasparentBitmap.recycle();
         trasparentBitmap=null;
@@ -848,6 +805,11 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 		Bitmap trasparentBitmap = Bitmap.createBitmap(coloredFiltered.getWidth(), coloredFiltered.getHeight(), config);
 		trasparentBitmap.eraseColor(ApplicationManager.TRANSPARENT_COLOR);
 		Canvas traspCanvas = new Canvas(trasparentBitmap);
+		
+		//double proportion = (double)mBitmap.getWidth()/(double)copyOfColoredBitmap.getWidth();
+		//traspCanvas.drawCircle((int)((x+(imageDimension))/proportion), (int)((y+(imageDimension))/proportion), (int)((imageDimension)/proportion), fillPaint);
+		//traspCanvas.drawLine(0, 0, copyOfColoredBitmap.getWidth(), copyOfColoredBitmap.getHeight(), fillPaint);
+		
 		
 		Path path = new Path();
 	    path.setFillType(Path.FillType.EVEN_ODD);
@@ -863,30 +825,29 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 		Canvas coloredMaskCanvas = new Canvas(copyOfColoredBitmap);
 	    ammoPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));//dst_out con maschera inversa dovrebbe funzare
 	    coloredMaskCanvas.drawBitmap(trasparentBitmap, 0, 0, ammoPaint);
-
-	    appendCenteredBitmapOnSCanvas(copyOfColoredBitmap, mBitmapPaint,VIEW_HEIGHT,VIEW_HEIGHT);
-        trasparentBitmap.recycle();
-        trasparentBitmap=null;
+	    Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
+	    mCanvas.drawBitmap(copyOfColoredBitmap, null, dst, mBitmapPaint);
+        invalidate();
+        
         copyOfColoredBitmap.recycle();
         copyOfColoredBitmap=null;
+        trasparentBitmap.recycle();
+        trasparentBitmap=null;
         System.gc();
 	}
 	
 	//Il JOLLY colora tutta la figura!!!
 	private void executeJolly(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
-		//Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
-		//mCanvas.drawBitmap(coloredFiltered, null, dst, mBitmapPaint);
-		appendCenteredBitmapOnSCanvas(coloredFiltered,mBitmapPaint,VIEW_HEIGHT,VIEW_HEIGHT);
-        //invalidate();
+		Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
+		mCanvas.drawBitmap(coloredFiltered, null, dst, mBitmapPaint);
+        invalidate();
 	}
 	
 	//Lo SKULL scolora tutta la figura!!!
 	private void executeSkull(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
-		//mBitmap.eraseColor(ApplicationManager.TRANSPARENT_COLOR);
-		//S PEN SDK pulisco il canvas
-    	dashboardActivity.mCanvasView.clear();
+		mBitmap.eraseColor(ApplicationManager.TRANSPARENT_COLOR);
 		//mBitmap = Bitmap.createBitmap(SCREEN_HEIGHT, SCREEN_HEIGHT, Bitmap.Config.ARGB_8888);
-        //invalidate();
+        invalidate();
 	}
 	
 	//Lo INK disegna sopra la figura una macchia di inchiostro.
@@ -899,54 +860,27 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 		int X = x0 -imageDimension;
 		int Y = y0 -imageDimension;
 		
-		Bitmap sPencanvasBitmap = dashboardActivity.mCanvasView.getBitmap(true);
-		Canvas spenCanvas = new Canvas(sPencanvasBitmap);
-		double SW = sPencanvasBitmap.getWidth();
-		double SH = sPencanvasBitmap.getHeight();
-		double sw = getWidth();
-		double sh = getHeight();
-		int offSetW = (int)(SW/2 - sw/2);
-		int offSetH = (int)(SH/2 - sh/2);
-		Rect dst = new Rect(offSetW+X,offSetH+Y,offSetW+X+(imageDimension*2),offSetH+Y+(imageDimension*2));
-		spenCanvas.drawBitmap(inkBitmap, null, dst, mBitmapPaint);
-		
-		dashboardActivity.mCanvasView.setBitmap(sPencanvasBitmap, true);
-		//invalidate();
-		sPencanvasBitmap.recycle();
-		sPencanvasBitmap = null;
-		
+		Rect dst = new Rect(X,Y,X+(imageDimension*2),Y+(imageDimension*2));
+		mCanvas.drawBitmap(inkBitmap, null, dst, mBitmapPaint);
+		invalidate();
 		inkBitmap.recycle();
 		inkBitmap = null;
 	}
 	
 	//La MOSCA se schiacciata disegna lo splat sul disegno.
 	private void executeMosca(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
-		Bitmap inkBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.macchiamosca);
+		Bitmap mosquitoBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.macchiamosca);
+		//int x0 = x + imageDimension/2;
+		//int y0= y +imageDimension/2;
 		
-		int x0 = x + imageDimension/2;
-		int y0= y +imageDimension/2;
+		//int X = x0 -imageDimension;
+		//int Y = y0 -imageDimension;
 		
-		int X = x0 -imageDimension;
-		int Y = y0 -imageDimension;
-		
-		Bitmap sPencanvasBitmap = dashboardActivity.mCanvasView.getBitmap(true);
-		Canvas spenCanvas = new Canvas(sPencanvasBitmap);
-		double SW = sPencanvasBitmap.getWidth();
-		double SH = sPencanvasBitmap.getHeight();
-		double sw = getWidth();
-		double sh = getHeight();
-		int offSetW = (int)(SW/2 - sw/2);
-		int offSetH = (int)(SH/2 - sh/2);
-		Rect dst = new Rect(offSetW+X,offSetH+Y,offSetW+X+(imageDimension*2),offSetH+Y+(imageDimension*2));
-		spenCanvas.drawBitmap(inkBitmap, null, dst, mBitmapPaint);
-		
-		dashboardActivity.mCanvasView.setBitmap(sPencanvasBitmap, true);
-		//invalidate();
-		sPencanvasBitmap.recycle();
-		sPencanvasBitmap = null;
-		
-		inkBitmap.recycle();
-		inkBitmap = null;
+		Rect dst = new Rect(x,y,x+(imageDimension),y+(imageDimension));
+		mCanvas.drawBitmap(mosquitoBitmap, null, dst, mBitmapPaint);
+		invalidate();
+		mosquitoBitmap.recycle();
+		mosquitoBitmap = null;
 	}
 	
 	//La FOGLIA se schiacciata disegna la foglia sul disegno.
@@ -966,26 +900,17 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 	private void executeSpray(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
 		sprayPaint.setColor(Color.BLACK);
 		
-		Bitmap sPencanvasBitmap = dashboardActivity.mCanvasView.getBitmap(true);
-		Canvas spenCanvas = new Canvas(sPencanvasBitmap);
-
-		int bitmapSizeW = sPencanvasBitmap.getWidth();
-		int bitmapSizeH = sPencanvasBitmap.getHeight();
-		int meanRadius = bitmapSizeH/200;
+		int bitmapSize = mBitmap.getWidth();
+		int meanRadius = bitmapSize/200;
 		if(meanRadius<=1) meanRadius =2;//così...per evitare sorprese
 		
 		for(int i=0; i<100; i++) {
 			int currentRadius = meanRadius + (int)(Math.random()*(meanRadius*2));
-			int currentX = (int)(Math.random()*bitmapSizeW);
-			int currentY = (int)(Math.random()*bitmapSizeH);
-			spenCanvas.drawCircle(currentX, currentY, currentRadius, sprayPaint);
+			int currentX = (int)(Math.random()*bitmapSize);
+			int currentY = (int)(Math.random()*bitmapSize);
+			mCanvas.drawCircle(currentX, currentY, currentRadius, sprayPaint);
 		}
-		
-		dashboardActivity.mCanvasView.setBitmap(sPencanvasBitmap, true);
-		//invalidate();
-		sPencanvasBitmap.recycle();
-		sPencanvasBitmap = null;
-	    System.gc();
+		invalidate();
 	}
 	
 	//La BULLET HOLE o MITRAGLIATA fa una spraiata di pallini trasparenti (cancella )sul disegno.
@@ -993,26 +918,17 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 		candegginaPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
 		candegginaPaint.setColor(ApplicationManager.TRANSPARENT_COLOR);
 		
-		Bitmap sPencanvasBitmap = dashboardActivity.mCanvasView.getBitmap(true);
-		Canvas spenCanvas = new Canvas(sPencanvasBitmap);
-
-		int bitmapSizeW = sPencanvasBitmap.getWidth();
-		int bitmapSizeH = sPencanvasBitmap.getHeight();
-		int meanRadius = bitmapSizeH/50;
+		int bitmapSize = mBitmap.getWidth();
+		int meanRadius = bitmapSize/100;
 		if(meanRadius<=1) meanRadius =2;//così...per evitare sorprese
 		
 		for(int i=0; i<100; i++) {
 			int currentRadius = meanRadius + (int)(Math.random()*(meanRadius*2));
-			int currentX = (int)(Math.random()*bitmapSizeW);
-			int currentY = (int)(Math.random()*bitmapSizeH);
-			spenCanvas.drawCircle(currentX, currentY, currentRadius, candegginaPaint);
+			int currentX = (int)(Math.random()*bitmapSize);
+			int currentY = (int)(Math.random()*bitmapSize);
+			mCanvas.drawCircle(currentX, currentY, currentRadius, candegginaPaint);
 		}
-		
-		dashboardActivity.mCanvasView.setBitmap(sPencanvasBitmap, true);
-		//invalidate();
-		sPencanvasBitmap.recycle();
-		sPencanvasBitmap = null;
-	    System.gc();
+		invalidate();
 	}
 	
 	//La color mitra colora tanti pallini casuali
@@ -1022,7 +938,9 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 		Bitmap trasparentBitmap = Bitmap.createBitmap(coloredFiltered.getWidth(), coloredFiltered.getHeight(), config);
 		trasparentBitmap.eraseColor(ApplicationManager.TRANSPARENT_COLOR);
 		Canvas traspCanvas = new Canvas(trasparentBitmap);
-
+		
+		//double proportion = (double)mBitmap.getWidth()/(double)copyOfColoredBitmap.getWidth();
+		//traspCanvas.drawCircle((int)((x+(imageDimension))/proportion), (int)((y+(imageDimension))/proportion), (int)((imageDimension)/proportion), fillPaint);
 		int bitmapSize = copyOfColoredBitmap.getWidth();
 		int meanRadius = bitmapSize/100;
 		if(meanRadius<=1) meanRadius =2;//così...per evitare sorprese
@@ -1037,9 +955,11 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 		Canvas coloredMaskCanvas = new Canvas(copyOfColoredBitmap);
 	    ammoPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));//dst_out con maschera inversa dovrebbe funzare
 	    coloredMaskCanvas.drawBitmap(trasparentBitmap, 0, 0, ammoPaint);
-
-	    appendCenteredBitmapOnSCanvas(copyOfColoredBitmap, mBitmapPaint,VIEW_HEIGHT,VIEW_HEIGHT);
-	    copyOfColoredBitmap.recycle();
+	    Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
+	    mCanvas.drawBitmap(copyOfColoredBitmap, null, dst, mBitmapPaint);
+        invalidate();
+        
+        copyOfColoredBitmap.recycle();
         copyOfColoredBitmap=null;
         trasparentBitmap.recycle();
         trasparentBitmap=null;
@@ -1053,7 +973,6 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 		//Cambio lo strumento
     	ApplicationManager.setTOOL(ApplicationManager.TOOL_PENNELLO);
     	ApplicationManager.setCurrentColor(colore);
-    	changeSPENColor(colore);
 		this.setColor(colore);
 	}
 	
@@ -1066,14 +985,12 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 	private void executeTerremoto(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
 		 Animation anim = AnimationFactory.getTerremotoAnimation(context);
 		 this.startAnimation(anim);
-		 dashboardActivity.mCanvasView.startAnimation(anim);
 	}
 	
 	//VORTICE fa ruotare il quadro.
 	private void executeVortice(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
 		 Animation anim = AnimationFactory.getVorticeAnimation(context);
 		 this.startAnimation(anim);
-		 dashboardActivity.mCanvasView.startAnimation(anim);
 	}
 	
 	//La CANDEGGINA cancella un cerchio dove si è cliccato.
@@ -1081,92 +998,36 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 	private void executeCandeggina(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
 		candegginaPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
 		candegginaPaint.setColor(ApplicationManager.TRANSPARENT_COLOR);
-	   
-        Bitmap sPencanvasBitmap = dashboardActivity.mCanvasView.getBitmap(true);
-		Canvas spenCanvas = new Canvas(sPencanvasBitmap);
-
-		double SW = sPencanvasBitmap.getWidth();
-		double SH = sPencanvasBitmap.getHeight();
-		double sw = getWidth();
-		double sh = getHeight();
-		int offSetW = (int)(SW/2 - sw/2);
-		int offSetH = (int)(SH/2 - sh/2);
-		
-		spenCanvas.drawCircle(offSetW+(int)((x+(imageDimension/2))), offSetH+(int)((y+(imageDimension/2))), (int)((imageDimension)), candegginaPaint);
-        
-		dashboardActivity.mCanvasView.setBitmap(sPencanvasBitmap, true);
-		//invalidate();
-		sPencanvasBitmap.recycle();
-		sPencanvasBitmap = null;
-	    System.gc();
+	    mCanvas.drawCircle((int)((x+(imageDimension/2))), (int)((y+(imageDimension/2))), (int)((imageDimension)), candegginaPaint);
+        invalidate();
 
 	}
 	
 	//La MAGIC EDGES pulisce tutto ciò che è fuori dai bordi dell'immagine.
 	private void executeMagicEdges(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
-		//Bitmap.Config config = Bitmap.Config.ARGB_8888;
-		Bitmap trasparentBitmap = Bitmap.createScaledBitmap(coloredFiltered, getWidth(), getHeight(), false);
-		Bitmap copyOfColoredBitmap = dashboardActivity.mCanvasView.getBitmap(true);
-		
-		//Ritaglio la parte di interesse
-		double SW = copyOfColoredBitmap.getWidth();
- 		double SH = copyOfColoredBitmap.getHeight();
- 		double sw = getWidth();
- 		double sh = getHeight();
- 		Bitmap croppedCanvas = Bitmap.createBitmap(copyOfColoredBitmap, (int)(SW/2 - sw/2), (int)(SH/2 - sh/2), (int)sw, (int)sh);
- 		copyOfColoredBitmap.recycle();//gc
- 		copyOfColoredBitmap = null;//gc
- 		
+		Bitmap.Config config = Bitmap.Config.ARGB_8888;
+		Bitmap trasparentBitmap = coloredFiltered.copy(config, true);
 	    ammoPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));//dst_out con maschera inversa dovrebbe funzare
-	    //Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
-	    //mCanvas.drawBitmap(trasparentBitmap, null, dst, ammoPaint);
-        //invalidate();
-	    Canvas coloredMaskCanvas = new Canvas(croppedCanvas);
-	    coloredMaskCanvas.drawBitmap(trasparentBitmap, 0, 0, ammoPaint);
-	    
-	    dashboardActivity.mCanvasView.clear();
-	    appendCenteredBitmapOnSCanvas(croppedCanvas, mBitmapPaint, VIEW_WIDTH, VIEW_WIDTH);
-	    
- 		croppedCanvas.recycle();//gc
- 		croppedCanvas = null;//gc
- 		if(trasparentBitmap != coloredFiltered) {
- 			trasparentBitmap.recycle();
-        	trasparentBitmap=null;
- 		}
+		//ammoPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));//dst_out con maschera inversa dovrebbe funzare
+	    Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
+	    mCanvas.drawBitmap(trasparentBitmap, null, dst, ammoPaint);
+        invalidate();
+        trasparentBitmap.recycle();
+        trasparentBitmap=null;
         System.gc();
 	}
 	
 	//La MAGIC EDGES pulisce tutto ciò che è fuori dai bordi dell'immagine.
 	private void executeMagicEdgesInverse(int x,int y,Context context,int imageDimension, AmmoBean ammo) {
-		//Bitmap.Config config = Bitmap.Config.ARGB_8888;
-		Bitmap trasparentBitmap = Bitmap.createScaledBitmap(coloredFiltered, getWidth(), getHeight(), false);
-		Bitmap copyOfColoredBitmap = dashboardActivity.mCanvasView.getBitmap(true);
-		
-		//Ritaglio la parte di interesse
-		double SW = copyOfColoredBitmap.getWidth();
- 		double SH = copyOfColoredBitmap.getHeight();
- 		double sw = getWidth();
- 		double sh = getHeight();
- 		Bitmap croppedCanvas = Bitmap.createBitmap(copyOfColoredBitmap, (int)(SW/2 - sw/2), (int)(SH/2 - sh/2), (int)sw, (int)sh);
- 		copyOfColoredBitmap.recycle();//gc
- 		copyOfColoredBitmap = null;//gc
- 		
-	    ammoPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));//dst_out con maschera inversa dovrebbe funzare
-	    //Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
-	    //mCanvas.drawBitmap(trasparentBitmap, null, dst, ammoPaint);
-        //invalidate();
-	    Canvas coloredMaskCanvas = new Canvas(croppedCanvas);
-	    coloredMaskCanvas.drawBitmap(trasparentBitmap, 0, 0, ammoPaint);
-	    
-	    dashboardActivity.mCanvasView.clear();
-	    appendCenteredBitmapOnSCanvas(croppedCanvas, mBitmapPaint, VIEW_WIDTH, VIEW_WIDTH);
-	    
- 		croppedCanvas.recycle();//gc
- 		croppedCanvas = null;//gc
- 		if(trasparentBitmap != coloredFiltered) {
- 			trasparentBitmap.recycle();
-        	trasparentBitmap=null;
- 		}
+		Bitmap.Config config = Bitmap.Config.ARGB_8888;
+		Bitmap trasparentBitmap = coloredFiltered.copy(config, true);
+	    //ammoPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));//dst_out con maschera inversa dovrebbe funzare
+		ammoPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));//dst_out con maschera inversa dovrebbe funzare
+	    Rect dst = new Rect(0,0,mBitmap.getWidth(),mBitmap.getHeight());
+	    mCanvas.drawBitmap(trasparentBitmap, null, dst, ammoPaint);
+        invalidate();
+        trasparentBitmap.recycle();
+        trasparentBitmap=null;
         System.gc();
 	}
 	
@@ -1174,46 +1035,4 @@ public class FingerPaintDrawableView extends View implements OnTouchListener{
 	public void setResultComputed(boolean b) {
 		this.resultComputed = b;
 	}
-	
-	public void changeSPENMode(int mode) {
-		dashboardActivity.mCanvasView.setCanvasMode(mode);
-		//La dimensione è la stessa per ogni modalità
-		SettingStrokeInfo strokeInfo = dashboardActivity.mCanvasView.getSettingViewStrokeInfo();
-		if(strokeInfo != null) {
-			strokeInfo.setStrokeWidth(ApplicationManager.getPaintSize());
-			dashboardActivity.mCanvasView.setSettingViewStrokeInfo(strokeInfo);	
-		}
-	}
-	
-	public void changeSPENColor(int color) {
-    	/*
-		PenSettingInfo info = dashboardActivity.mCanvasView.getPenSettingInfo();
-        info.setPenColor(color);
-        */
-        
-        SettingStrokeInfo strokeInfo = dashboardActivity.mCanvasView.getSettingViewStrokeInfo();
-		if(strokeInfo != null) {
-			strokeInfo.setStrokeColor(color);
-			dashboardActivity.mCanvasView.setSettingViewStrokeInfo(strokeInfo);	
-		}	
-		
-		
-        //dashboardActivity.mCanvasView.setPenSettingInfo(info);
-    }
-	
-	public void changeSPENSize(int size) {
-		/*
-    	PenSettingInfo info = dashboardActivity.mCanvasView.getPenSettingInfo();
-        info.setPenWidth(size);
-        info.setEraserWidth(size);
-        //dashboardActivity.mCanvasView.setPenSettingInfo(info);
-        */
-        
-		SettingStrokeInfo strokeInfo = dashboardActivity.mCanvasView.getSettingViewStrokeInfo();
-		if(strokeInfo != null) {
-			strokeInfo.setStrokeWidth(size);
-			dashboardActivity.mCanvasView.setSettingViewStrokeInfo(strokeInfo);	
-		}
-			
-    }
 }

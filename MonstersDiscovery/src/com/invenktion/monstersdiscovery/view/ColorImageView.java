@@ -1,11 +1,10 @@
 package com.invenktion.monstersdiscovery.view;
 
+
+import com.invenktion.monstersdiscovery.R;
 import com.invenktion.monstersdiscovery.core.AnimationFactory;
 import com.invenktion.monstersdiscovery.core.ApplicationManager;
 import com.invenktion.monstersdiscovery.core.SoundManager;
-import com.invenktion.monstersdiscovery.R;
-import com.samsung.sdraw.CanvasView;
-import com.samsung.spensdk.SCanvasConstants;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -144,7 +143,6 @@ public class ColorImageView extends ImageView implements OnTouchListener{
         
         	//Cambio lo strumento
         	ApplicationManager.setTOOL(ApplicationManager.TOOL_PENNELLO);
-        	fingerPaintView.changeSPENMode(SCanvasConstants.SCANVAS_MODE_INPUT_PEN);
         	
         	SoundManager.playSound(SoundManager.SOUND_PLAF, getContext().getApplicationContext(),false);
         	
@@ -157,7 +155,6 @@ public class ColorImageView extends ImageView implements OnTouchListener{
 		}
 		ApplicationManager.setCurrentColor(colore);
 		fingerPaintView.setColor(colore);
-		fingerPaintView.changeSPENColor(colore);
 		return true;
 	}
 }

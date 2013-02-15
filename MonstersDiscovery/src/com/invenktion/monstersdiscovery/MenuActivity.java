@@ -12,9 +12,6 @@ import com.invenktion.monstersdiscovery.utils.ActivityHelper;
 import com.invenktion.monstersdiscovery.utils.LogUtils;
 import com.invenktion.monstersdiscovery.utils.SharedPreferencesUtils;
 import com.invenktion.monstersdiscovery.view.FingerPaintDrawableView;
-import com.samsung.spen.lib.input.SPenEventLibrary;
-import com.samsung.spensdk.SCanvasConstants;
-import com.samsung.spensdk.applistener.SPenHoverListener;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -55,8 +52,6 @@ public class MenuActivity extends Activity{
 	float DENSITY = 1.0f;
 	
 	BroadcastReceiver mReceiver;
-	
-	SPenEventLibrary sPenEventLibrary;
 	
 	static final int DIALOG_EXIT_APPLICATION = 0;
 	private boolean waiting = false;
@@ -226,8 +221,6 @@ public class MenuActivity extends Activity{
         
         setContentView(R.layout.home);
         this.DENSITY = getApplicationContext().getResources().getDisplayMetrics().density;
-        
-        sPenEventLibrary = new SPenEventLibrary();
         
         FrameLayout frameLayout = (FrameLayout)findViewById(R.id.homelayout);
 

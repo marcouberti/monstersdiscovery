@@ -11,9 +11,6 @@ import com.invenktion.monstersdiscovery.R;
 import com.invenktion.monstersdiscovery.utils.ActivityHelper;
 import com.invenktion.monstersdiscovery.utils.LogUtils;
 import com.invenktion.monstersdiscovery.widget.OneStepGallery;
-import com.samsung.spen.lib.input.SPenEventLibrary;
-import com.samsung.spensdk.applistener.SPenHoverListener;
-
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -189,7 +186,6 @@ public class ArcadeModeChooseLevelActivity extends Activity{
  
     };
 	
-    private SPenEventLibrary sPenEventLibrary = new SPenEventLibrary();
 	private View buildView(int page) {
 		//FrameLayout frameLayout = (FrameLayout)findViewById(R.id.arcadechooselevellayout);
 		//Facciamo due strisce con 5 livelli ciscuna
@@ -382,61 +378,7 @@ public class ArcadeModeChooseLevelActivity extends Activity{
             //}else{
             	//secondariga.addView(ll);
             //}
-            	//HOVER EVENT S PEN SDK
-            	sPenEventLibrary.setSPenHoverListener(i,new SPenHoverListener(){
-                	int W = -1;
-                	int H = -1;
-        			public boolean onHover(View arg0, MotionEvent event) {
-        				if(event.getAction()==MotionEvent.ACTION_HOVER_ENTER)	{
-        					if(W == -1){
-        						W = i.getWidth();
-        						H = i.getHeight();
-        					}
-        					//starsll.setVisibility(View.INVISIBLE);
-        					//Carico l'animazioncina
-        					Animation hoverEnterAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.hoverenteranimation);
-        					hoverEnterAnimation.setFillAfter(true);
-        					i.startAnimation(hoverEnterAnimation);
-        					i.setImageResource(pic.getColoredPicture());
-        					
-        					iBg.setVisibility(View.INVISIBLE);
-        					iFg.setVisibility(View.INVISIBLE);
-        					/*
-        					RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams((int)(W*2.5), (int)(H*2.5));
-        					params.addRule(RelativeLayout.CENTER_IN_PARENT);
-        					i.setLayoutParams(params);
-        					i.setImageResource(pic.getColoredPicture());
-        					*/
-        				}else if(event.getAction()==MotionEvent.ACTION_HOVER_EXIT){
-        					//Carico l'animazioncina
-        					//Animation hoverExitAnimation = AnimationFactory.getHoverExitAnimation(getApplicationContext());
-        					//hoverExitAnimation.setFillAfter(true);
-        					//i.setAnimation(null);
-        					i.setAnimation(null);
-        					//starsll.setVisibility(View.VISIBLE);
-        					if(W == -1){
-        						W = i.getWidth();
-        						H = i.getHeight();
-        					}
-        					
-        					RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams((int)(W), (int)(H));
-        					params.addRule(RelativeLayout.CENTER_IN_PARENT);
-        					i.setLayoutParams(params);
-        					
-        					iBg.setVisibility(View.VISIBLE);
-        					iFg.setVisibility(View.VISIBLE);
-        				}
-        				return true;
-        			}
-
-        			public void onHoverButtonDown(View arg0, MotionEvent arg1) {
-
-        			}
-
-        			public void onHoverButtonUp(View arg0, MotionEvent arg1) {
-
-        			}
-                });
+            	
         }
         //frameLayout.addView(container);
         //frameLayout.addView(glassPane);

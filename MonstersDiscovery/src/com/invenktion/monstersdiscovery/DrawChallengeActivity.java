@@ -1,6 +1,6 @@
 package com.invenktion.monstersdiscovery;
 
-import java.util.HashMap;
+
 import java.util.Vector;
 
 import com.invenktion.monstersdiscovery.bean.AmmoBean;
@@ -14,20 +14,11 @@ import com.invenktion.monstersdiscovery.core.FontFactory;
 import com.invenktion.monstersdiscovery.core.LevelManager;
 import com.invenktion.monstersdiscovery.core.SoundManager;
 import com.invenktion.monstersdiscovery.core.TimeManager;
-import com.invenktion.monstersdiscovery.R;
 import com.invenktion.monstersdiscovery.view.ColorImageView;
 import com.invenktion.monstersdiscovery.view.FingerPaintDrawableView;
 import com.invenktion.monstersdiscovery.view.GommaImageView;
-import com.samsung.samm.common.SObjectStroke;
-import com.samsung.sdraw.CanvasView;
-import com.samsung.sdraw.PenSettingInfo;
-import com.samsung.spen.settings.SettingStrokeInfo;
-import com.samsung.spensdk.SCanvasConstants;
-import com.samsung.spensdk.SCanvasView;
-import com.samsung.spensdk.applistener.SCanvasInitializeListener;
 
 import android.app.Activity;
-import android.app.KeyguardManager;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -40,9 +31,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.drawable.BitmapDrawable;
 
-import android.os.Build;
 import android.os.Bundle;
-
 import android.os.Handler;
 
 import android.util.Log;
@@ -61,7 +50,6 @@ import android.view.animation.Animation.AnimationListener;
 
 import android.widget.FrameLayout;
 
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -70,8 +58,6 @@ import android.widget.TextView;
 
 public class DrawChallengeActivity extends Activity {
     
-	//private AdView adView;
-	
 	static final int DIALOG_RESULT_LEVEL = 0;
 	static final int DIALOG_START_LEVEL = 1;
 	static final int DIALOG_PAUSE = 2;
@@ -80,7 +66,6 @@ public class DrawChallengeActivity extends Activity {
 	static final int DIALOG_AMMO_UNLOCKED = 5;
 	static final int DIALOG_FINISH_GAME = 6;
 	static final int DIALOG_INSTRUCTION = 7;
-	static final int DIALOG_RENAME_MONSTER = 8;
 	
 	//boolean waiting = false;
 	
@@ -90,9 +75,9 @@ public class DrawChallengeActivity extends Activity {
 	//Typeface fontPaintSize; 
 	//Typeface fontTime; 
 	//DynamicBackgroundDrawableView backgroundDrawableView;
-	public SCanvasView mCanvasView;
 	FingerPaintDrawableView fingerPaintDrawableView;
-
+	public ImageView contourImage;
+	//GlassPaneDrawableView glassPane;
 	RelativeLayout relativeLayoutFingerDrawable;
 	RelativeLayout ammoRelativeContainer;
 	
@@ -125,7 +110,6 @@ public class DrawChallengeActivity extends Activity {
 	
 	@Override
 	protected void onDestroy() {
-		Log.d("### destroy activity drawchallenge","#### destroy");
 		super.onDestroy();
 		playingTime = false;
 		//Rilascio le risorse Bitmap
@@ -135,7 +119,12 @@ public class DrawChallengeActivity extends Activity {
 		AnimationFactory.releaseAllAnimation();
 		//backgroundDrawableView.recycleBitmaps();
 		//SoundManager.playBackgroundMusic(getApplicationContext());
-		
+		/*
+		ApplicationManager.setGOMMA_TEXT(null);
+		ApplicationManager.setGOMMA_ICON(null);
+		ApplicationManager.setPENNELLO_ICON(null);
+		ApplicationManager.setPENNELLO_TEXT(null);
+		*/
 		//if(ApplicationManager.getGLASS_PANE() != null){
 			//ApplicationManager.getGLASS_PANE().recycleBitmaps();
 		//}
@@ -143,17 +132,6 @@ public class DrawChallengeActivity extends Activity {
 		System.gc();
 	}
 
-	private boolean hasFocus = true;
-	@Override
-	public void onWindowFocusChanged(boolean hasFocus) {
-	    super.onWindowFocusChanged(hasFocus);
-	    this.hasFocus = hasFocus;
-	    Log.d("", "On windows focus changed. (" + hasFocus + ")");
-
-	    if (!hasFocus)handlePausingGame();
-	}
-
-	
 	@Override
 	protected void onPause() {
 		handlePausingGame();
@@ -170,15 +148,10 @@ public class DrawChallengeActivity extends Activity {
 	protected void onResume() {
 		
 		//Aggiorno la view, per ovviare al bug del dialog che non si vede più dopo la pausa
-		//setVisible(true);
 		if(playingTime && TimeManager.isPaused()){
-			KeyguardManager keyguardManager = (KeyguardManager)getApplicationContext().getSystemService(Activity.KEYGUARD_SERVICE);  
-	    	boolean bloccoSchermoAttivo = keyguardManager.inKeyguardRestrictedInputMode();
-			if(!bloccoSchermoAttivo) {
-				showDialog(DIALOG_PAUSE);
-			}
+    		showDialog(DIALOG_PAUSE);
     	}
-	
+		
 		//Rilancio la musica se e solo se non è già attiva
 		//Questo ci permette di utilizzare la stessa traccia musicale tra Activity differenti, oltre
 		//al metodo presente nel onPause che controlla se siamo o no in background
@@ -196,31 +169,17 @@ public class DrawChallengeActivity extends Activity {
 		//Quando il calcolo del risultato è iniziato, non è possibile
     	//mettere in pausa.(playingTime)
 		if(playingTime && !TimeManager.isPaused()){
-			Log.d("TimeManager.setPause(true)","TimeManager.setPause(true)");
     		TimeManager.setPause(true);
     		showDialog(DIALOG_PAUSE);
-    	}else{
-    		Log.d("NOT TimeManager.setPause(true)","NOT TimeManager.setPause(true)");
     	}
 	}
 	
 	@Override
-	public boolean onKeyLongPress(int keyCode, KeyEvent event) {
-		Log.d("","#### key ="+keyCode);
-		if (keyCode == KeyEvent.KEYCODE_HOME) {
-	    	handlePausingGame();
-	        return true;
-	    }
-		return super.onKeyLongPress(keyCode, event);
-	}
-	
-	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		Log.d("","#### key ="+keyCode);
 	    if (keyCode == KeyEvent.KEYCODE_BACK) {
 	    	handlePausingGame();
 	        return true;
-	    } 
+	    }
 	    return super.onKeyDown(keyCode, event);
 	}
 
@@ -236,17 +195,16 @@ public class DrawChallengeActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        boolean finish = checkApplicationKill();
-        if(finish) return;
+        boolean killed = checkApplicationKill();
+        if(killed) return;
         //Metto in pausa la musica di background
         SoundManager.pauseBackgroundMusic();
         //Salvo la modalità di gioco che mi è stata passata
         Bundle extras = getIntent().getExtras();
         if(extras !=null){
         	gamemode = extras.getString("gamemode");
-        	//Log.d("GAMEMODE ######",gamemode);
+        	////Log.d("GAMEMODE ######",gamemode);
         }
-        
         
         this.DENSITY = getApplicationContext().getResources().getDisplayMetrics().density;
         //backgroundDrawableView = new DynamicBackgroundDrawableView(this,R.drawable.desktop3,true);
@@ -275,74 +233,17 @@ public class DrawChallengeActivity extends Activity {
         //Qui posso limitare la dimensione fisica (e quindi anche quella in pixel della bitmap) 
         //della lavagna (per dispositivi con schermi xlarge)
         //Va bene perchè tanto la fingerPaint si adatta sulla sua stessa dimensione e i calcoli poi sono corretti.
-       
         if(dashboardSize > pixelCorrispondenti) dashboardSize = pixelCorrispondenti;
-        /*
-        ActivityManager am = ((ActivityManager)getSystemService(Activity.ACTIVITY_SERVICE));
-        int memory = am.getMemoryClass();
-        int largeMemory = am.getLargeMemoryClass();
-        Log.d("","### MEM NORMAL = "+memory +" large="+largeMemory);
-		*/
-        
         
 		RelativeLayout.LayoutParams fingerRelativeParams = new RelativeLayout.LayoutParams(dashboardSize, dashboardSize);
 		fingerRelativeParams.addRule(RelativeLayout.CENTER_IN_PARENT);
-		
-		//SAMSUNG S PEN CANVAS VIEW
-        mCanvasView = new SCanvasView(getApplicationContext());
-        mCanvasView.setCanvasMaxZoomScale(1.0f);//nuovo in SDK 2.2
-        //mCanvasView.setSCanvasHoverPointerStyle(SCanvasConstants.SCANVAS_HOVERPOINTER_STYLE_NONE);
-        //FIX CUSTOM per zoom e < java 1.6 s pen sdk
-        mCanvasView.setOnTouchListener(new OnTouchListener() {
-			public boolean onTouch(View v, MotionEvent event) {
-					if(event.getPointerCount() == 2) {
-						return true;//blocco la catena
-					}else {
-						return false;//faccio proseguire la catena e l'SDK gestisce
-					}
-			}
-		});
-        // Resource
-		HashMap<String,Integer> settingResourceMap = new HashMap<String, Integer>();
-		// Layout 
-		settingResourceMap.put(SCanvasConstants.LAYOUT_PEN_SPINNER, R.layout.mspinner);
-		// Create Setting View
-		//boolean bClearAllVisibileInEraserSetting = false;
-		// Resource Map for Custom font path
-		//HashMap<String,String> settingResourceMapString = new HashMap<String, String>();
-		//mSCanvas.createSettingView(settingViewContainer, settingResourceMap, settingResourceMapString);    	  
-		
-        mCanvasView.setSCanvasInitializeListener(new SCanvasInitializeListener() {
-			public void onInitialized() {
-				SettingStrokeInfo strokeInfo = mCanvasView.getSettingViewStrokeInfo();
-				if(strokeInfo != null) {
-					strokeInfo.setStrokeStyle(SObjectStroke.SAMM_STROKE_STYLE_SOLID);
-					strokeInfo.setStrokeWidth(SObjectStroke.SAMM_DEFAULT_MAX_STROKESIZE);
-					//strokeInfo.setEraserWidth(PenSettingInfo.MAX_ERASER_WIDTH / 3);
-					mCanvasView.setSettingViewStrokeInfo(strokeInfo);	
-				}
-				initNextLevel(true,true);
-			}
-		});
-        
-        //NB se si vuole il s canvas in full screen commentare questa riga e 
-        //aggiunge mCanvasView in fondo al framelayout direttamente (ma attenzione agli OutOfMemory)
-        boolean oldOS = false;
-        if(Build.VERSION.RELEASE.startsWith("1") || Build.VERSION.RELEASE.startsWith("2")) {//con OS vecchi senza largeheap faccio la lavagna piccola
-        	oldOS = true;
-        }
-        
-        if(oldOS) {
-        	relativeLayoutFingerDrawable.addView(mCanvasView,fingerRelativeParams);
-        }
-		
 		fingerPaintDrawableView = new FingerPaintDrawableView(getApplicationContext(), this);
-	
+		contourImage = new ImageView(getApplicationContext());
+		
 		relativeLayoutFingerDrawable.addView(fingerPaintDrawableView,fingerRelativeParams);
+		relativeLayoutFingerDrawable.addView(contourImage,fingerRelativeParams);
         ammoRelativeContainer = new RelativeLayout(getApplicationContext());
         relativeLayoutFingerDrawable.addView(ammoRelativeContainer,fingerRelativeParams);
-        
-        
         /*
         font = Typeface.createFromAsset(getAssets(), FontFactory.FONT1); 
         fontPaintSize = Typeface.createFromAsset(getAssets(), FontFactory.FONT1); 
@@ -465,11 +366,6 @@ public class DrawChallengeActivity extends Activity {
 	    		//dataLayout.addView(nextButton);
 	    	contentDataLayout.addView(dataLayout);
     	
-	    mCanvasView.createSettingView(frameLayout, settingResourceMap);
-	    //NB se si vuole il s canvas in full screen
-	    if(!oldOS) {
-	    	frameLayout.addView(mCanvasView);
-	    }
     	frameLayout.addView(relativeLayoutFingerDrawable);
     	//frameLayout.addView(glassPane);
 	    frameLayout.addView(contentDataLayout);
@@ -477,32 +373,18 @@ public class DrawChallengeActivity extends Activity {
     	frameLayout.addView(contentAmmoLayout);
     	frameLayout.addView(countDownLayout);
     
-    	//ADS
-    	/*
-    	// Create an ad.
-        adView = new AdView(this, AdSize.BANNER, "a14e4f9a8ce8695");
-        // Create an ad request.
-        AdRequest adRequest = new AdRequest();
-        // Fill out ad request.
-        //adRequest.setTesting(true);
-        adRequest.setGender(AdRequest.Gender.FEMALE);
-        // Start loading the ad in the background.
-        adView.loadAd(adRequest);
-        frameLayout.addView(adView);
-        */
     	
-	    //initNextLevel(true,true);
+	    initNextLevel(true,true);
 
      	setContentView(frameLayout);
-     	frameLayout.setKeepScreenOn(true);//per non fare andare il gioco in sleep mentre si gioca (SAMSUNG APPROVAL REQUEST)
+
     }
    
  
     private void initNextLevel(boolean firstInvocation, boolean showDialog) {
     	AnimationFactory.releaseAllAnimation();
     	//Azzero le dimensioni dei pennelli
-    	fingerPaintDrawableView.changeSPENSize(40);
-    	ApplicationManager.setPaintSize(40);
+    	ApplicationManager.setPaintSize((int)(35*DENSITY +0.5f));
     	//ApplicationManager.setGommaPaintSize((int)(35*DENSITY +0.5f));
     	
     	AmmoManager.initializeUnlockedAmmo(getApplicationContext());
@@ -511,9 +393,6 @@ public class DrawChallengeActivity extends Activity {
     	if(ammoRelativeContainer!= null) {
     		ammoRelativeContainer.removeAllViews();
     	}
-    	
-    	//S PEN SDK pulisco il canvas
-    	mCanvasView.clear();
     	
 		PictureBean picture = LevelManager.getCurrentLevel();
 		if(picture != null) {
@@ -604,7 +483,8 @@ public class DrawChallengeActivity extends Activity {
 			int Hs = (int)(H * 0.45);
 			int Ws = (int)(W * 0.45);
 
-			//pennello (c'è sempre)
+    		
+	    	//pennello (c'è sempre)
 			/*
 	    	FrameLayout pennelloFrame = new FrameLayout(getApplicationContext());
     			PennelloImageView pennelloBut = new PennelloImageView(getApplicationContext(),fingerPaintDrawableView,false);
@@ -631,72 +511,55 @@ public class DrawChallengeActivity extends Activity {
 			//DIMENSIONI PENNELLO (c'è sempre)
 	    	FrameLayout dimensioniFrame = new FrameLayout(getApplicationContext());
 	    		final ImageView dimBut = new ImageView(getApplicationContext());
-	    		dimBut.setImageResource(R.drawable.gommasize4);
+	    		dimBut.setImageResource(R.drawable.gommasize3);
 	    		dimBut.setLayoutParams(new FrameLayout.LayoutParams((int)(W/1.2),(int)(W/1.2),Gravity.RIGHT));
 	    		ImageView increase = new ImageView(getApplicationContext());
-	    			increase.setSoundEffectsEnabled(false);
 		    		increase.setImageResource(R.drawable.increase);
 		    		increase.setLayoutParams(new FrameLayout.LayoutParams(Hs,Hs,Gravity.RIGHT));
 	    		ImageView decrease = new ImageView(getApplicationContext());
-	    			decrease.setSoundEffectsEnabled(false);
 	    			decrease.setImageResource(R.drawable.decrease);
 	    			decrease.setLayoutParams(new FrameLayout.LayoutParams(Hs,Hs,Gravity.BOTTOM));
-	    			increase.setOnClickListener(new OnClickListener() {
-						public void onClick(View v) {
-							SoundManager.playSound(SoundManager.SOUND_PLAF, getApplicationContext(),false);
-							int currentPaintSize = ApplicationManager.getPaintSize();
-							int size = 0;
-							if(currentPaintSize <= PenSettingInfo.MIN_PEN_WIDTH) {
-								size = 10;
-								ApplicationManager.setPaintSize(size);
-								dimBut.setImageResource(R.drawable.gommasize2);
-							}else if(currentPaintSize == 10) {
-								size = 25;
-								ApplicationManager.setPaintSize(size);
-								dimBut.setImageResource(R.drawable.gommasize3);
-							}else if(currentPaintSize == 25) {
-								size = 40;
-								ApplicationManager.setPaintSize(size);
-								dimBut.setImageResource(R.drawable.gommasize4);
-							}else if(currentPaintSize == 40) {
-								size = PenSettingInfo.MAX_PEN_WIDTH;
-								ApplicationManager.setPaintSize(size);
-								dimBut.setImageResource(R.drawable.gommasize5);
-							}else if(currentPaintSize >= PenSettingInfo.MAX_PEN_WIDTH) {
-								//Non fa nulla
-								size = PenSettingInfo.MAX_PEN_WIDTH;
-							}
-							fingerPaintDrawableView.changeSPENSize(size);
+	    		increase.setOnClickListener(new OnClickListener() {
+					public void onClick(View v) {
+						int currentPaintSize = ApplicationManager.getPaintSize();
+						if(currentPaintSize == (int)(10*DENSITY +0.5f)) {
+							ApplicationManager.setPaintSize((int)(20*DENSITY +0.5f));
+							dimBut.setImageResource(R.drawable.gommasize2);
+						}else if(currentPaintSize == (int)(20*DENSITY +0.5f)) {
+							ApplicationManager.setPaintSize((int)(35*DENSITY +0.5f));
+							dimBut.setImageResource(R.drawable.gommasize3);
+						}else if(currentPaintSize == (int)(35*DENSITY +0.5f)) {
+							ApplicationManager.setPaintSize((int)(45*DENSITY +0.5f));
+							dimBut.setImageResource(R.drawable.gommasize4);
+						}else if(currentPaintSize == (int)(45*DENSITY +0.5f)) {
+							ApplicationManager.setPaintSize((int)(55*DENSITY +0.5f));
+							dimBut.setImageResource(R.drawable.gommasize5);
+						}else if(currentPaintSize == (int)(55*DENSITY +0.5f)) {
+							//Non fa nulla
 						}
-					});
-		    		decrease.setOnClickListener(new OnClickListener() {
-						public void onClick(View v) {
-							SoundManager.playSound(SoundManager.SOUND_PLAF, getApplicationContext(),false);
-							int currentPaintSize = ApplicationManager.getPaintSize();
-							int size = 0;
-							if(currentPaintSize <= PenSettingInfo.MIN_PEN_WIDTH) {
-								//niente
-								size = PenSettingInfo.MIN_PEN_WIDTH;
-							}else if(currentPaintSize == 10) {
-								size = PenSettingInfo.MIN_PEN_WIDTH;
-								ApplicationManager.setPaintSize(size);
-								dimBut.setImageResource(R.drawable.gommasize1);
-							}else if(currentPaintSize == 25) {
-								size = 10;
-								ApplicationManager.setPaintSize(size);
-								dimBut.setImageResource(R.drawable.gommasize2);
-							}else if(currentPaintSize == 40) {
-								size = 25;
-								ApplicationManager.setPaintSize(size);
-								dimBut.setImageResource(R.drawable.gommasize3);
-							}else if(currentPaintSize >= PenSettingInfo.MAX_PEN_WIDTH) {
-								size = 40;
-								ApplicationManager.setPaintSize(size);
-								dimBut.setImageResource(R.drawable.gommasize4);
-							}
-							fingerPaintDrawableView.changeSPENSize(size);
+					}
+				});
+	    		decrease.setOnClickListener(new OnClickListener() {
+					
+					public void onClick(View v) {
+						int currentPaintSize = ApplicationManager.getPaintSize();
+						if(currentPaintSize == (int)(10*DENSITY +0.5f)) {
+							//niente
+						}else if(currentPaintSize == (int)(20*DENSITY +0.5f)) {
+							ApplicationManager.setPaintSize((int)(10*DENSITY +0.5f));
+							dimBut.setImageResource(R.drawable.gommasize1);
+						}else if(currentPaintSize == (int)(35*DENSITY +0.5f)) {
+							ApplicationManager.setPaintSize((int)(20*DENSITY +0.5f));
+							dimBut.setImageResource(R.drawable.gommasize2);
+						}else if(currentPaintSize == (int)(45*DENSITY +0.5f)) {
+							ApplicationManager.setPaintSize((int)(35*DENSITY +0.5f));
+							dimBut.setImageResource(R.drawable.gommasize3);
+						}else if(currentPaintSize == (int)(55*DENSITY +0.5f)) {
+							ApplicationManager.setPaintSize((int)(45*DENSITY +0.5f));
+							dimBut.setImageResource(R.drawable.gommasize4);
 						}
-					});
+					}
+				});
 			dimensioniFrame.addView(dimBut);
 			dimensioniFrame.addView(increase);
 			dimensioniFrame.addView(decrease);
@@ -711,7 +574,7 @@ public class DrawChallengeActivity extends Activity {
     		trasp.setLayoutParams(new LinearLayout.LayoutParams((int)(H/4),(int)(H/4)));
     		ammoLayout.addView(trasp);
     		
-    		//gomma (c'è sempre)
+	    	//gomma (c'è sempre)
 	    	final int colore = ApplicationManager.TRANSPARENT_COLOR;
 	    	FrameLayout gommaFrame = new FrameLayout(getApplicationContext());
 	    		GommaImageView imBut = new GommaImageView(getApplicationContext(),fingerPaintDrawableView,colore,false);
@@ -746,8 +609,7 @@ public class DrawChallengeActivity extends Activity {
 		    	showDialog(DIALOG_INSTRUCTION);
 		    }else {
 			    try {
-			    	if(false) {//TOLTO IL DIALOG ALL'INIZIO, per ovviare al problema del dialog che a volte non appare
-			    	//if(showDialog) {
+			    	if(showDialog) {
 			    		showDialog(DIALOG_START_LEVEL);
 			    	}else{
 			    		startAnimation321GO();
@@ -780,7 +642,7 @@ public class DrawChallengeActivity extends Activity {
 	        }
     };
  
-    //Da la possibilità di riconfigurare un dialog
+  //Da la possibilità di riconfigurare un dialog
     protected void onPrepareDialog(int id, final Dialog dialog) {
     	switch(id) {
         case DIALOG_RESULT_LEVEL:
@@ -829,7 +691,7 @@ public class DrawChallengeActivity extends Activity {
         		ImageView image = (ImageView) dialog.findViewById(R.id.dialogimage);
         		//Bitmap scaled = Bitmap.createScaledBitmap(resultBitmap, 150, 150, true);
         		image.setImageBitmap(resultBitmap);
- 
+        		
         		//ImageView imageBoss = (ImageView) dialog.findViewById(R.id.dialogimageboss);
         		if(perc >= ApplicationManager.ONE_STAR_PERCENTAGE) {
         			SoundManager.playSound(SoundManager.SOUND_POSITIVE, getApplicationContext(), false);
@@ -1021,16 +883,10 @@ public class DrawChallengeActivity extends Activity {
 			bestTextView.setText("RECORD: "+fingerPaintDrawableView.getPicture().getBestResultEver(getApplicationContext(), gamemode)+"%");
 			bestTextView.setTypeface(FontFactory.getFont1(getApplicationContext()));
 			
-			//In modalità atelier invece non mostro i crediti guadagnati
-			
-			
             break;
         case DIALOG_PAUSE:
         	INTENTIONALLY_CLOSED_PAUSE = false;
-        	// prepare the custom dialog
-			//ImageView pause_startImage = (ImageView) dialog.findViewById(R.id.dialogimageboss);
-			//pause_startImage.setImageResource(LevelManager.getCurrentSection().getBossResourceNormal());
-			
+        	
 			// prepare the custom dialog
 			ImageView pause_pictureImage = (ImageView) dialog.findViewById(R.id.dialogimage);
 			pause_pictureImage.setImageResource(LevelManager.getCurrentLevel().getColoredPicture());
@@ -1043,40 +899,6 @@ public class DrawChallengeActivity extends Activity {
 			pause_bestTextView.setText("RECORD: "+fingerPaintDrawableView.getPicture().getBestResultEver(getApplicationContext(), gamemode)+"%");
 			pause_bestTextView.setTypeface(FontFactory.getFont1(getApplicationContext()));
 			
-			//In modalità atelier invece non mostro i crediti guadagnati
-			
-			
-            break;
-        case DIALOG_RENAME_MONSTER:
-        	
-			// prepare the custom dialog
-			ImageView rename_pictureImage = (ImageView) dialog.findViewById(R.id.dialogimage);
-			rename_pictureImage.setImageResource(LevelManager.getCurrentLevel().getColoredPicture());
-			
-			final EditText rename_titleTextView = (EditText) dialog.findViewById(R.id.renameText);
-			rename_titleTextView.setText(fingerPaintDrawableView.getPicture().getTitle(getApplicationContext()).toUpperCase());
-			rename_titleTextView.setTypeface(FontFactory.getFont1(getApplicationContext()));
-			
-			TextView youcanrenameText = (TextView) dialog.findViewById(R.id.youcanrenameText);
-			youcanrenameText.setTypeface(FontFactory.getFont1(getApplicationContext()));
-			
-			ImageView okBtn = (ImageView)dialog.findViewById(R.id.okButton);
-			okBtn.setOnClickListener(new OnClickListener() {
-				public void onClick(View v) {
-					if(rename_titleTextView.getText().toString() != null && !("".equalsIgnoreCase(rename_titleTextView.getText().toString()))) {
-						LevelManager.getCurrentLevel().changeNameByUser(rename_titleTextView.getText().toString(), getApplicationContext());
-					}
-					dialog.dismiss();
-				}
-			});
-			
-			ImageView skipBtn = (ImageView)dialog.findViewById(R.id.skipButton);
-			skipBtn.setOnClickListener(new OnClickListener() {
-				public void onClick(View v) {
-					dialog.dismiss();
-				}
-			});
-			
             break;
         case DIALOG_INSTRUCTION:
         	INTENTIONALLY_CLOSED_INSTRUCTION = false;
@@ -1088,8 +910,7 @@ public class DrawChallengeActivity extends Activity {
 				public void onClick(View v) {
 					INTENTIONALLY_CLOSED_INSTRUCTION = true;
 					dialog.dismiss();
-					//showDialog(DIALOG_START_LEVEL);
-					startAnimation321GO();
+					showDialog(DIALOG_START_LEVEL);
 				}
 			});
         	
@@ -1116,8 +937,7 @@ public class DrawChallengeActivity extends Activity {
 					}else {
 						INTENTIONALLY_CLOSED_INSTRUCTION = true;
 						dialog.dismiss();
-						//showDialog(DIALOG_START_LEVEL);
-						startAnimation321GO();
+						showDialog(DIALOG_START_LEVEL);
 					}
 					tutorialStep++;
 				}
@@ -1193,7 +1013,6 @@ public class DrawChallengeActivity extends Activity {
 			dialog = new Dialog(this);
 			dialog.setCancelable(true);
 			dialog.setCanceledOnTouchOutside(false);
-			
 			dialog.setOnDismissListener(new OnDismissListener() {
 				public void onDismiss(DialogInterface dialog) {
 					//Come se avesse cliccato MENU BUTTON
@@ -1296,11 +1115,7 @@ public class DrawChallengeActivity extends Activity {
 				public void onDismiss(DialogInterface dialog) {
 					//Come se avesse cliccato MENU BUTTON
 					if(!INTENTIONALLY_CLOSED_SECTION_UNLOCKED) {
-						if(newrecord && !(ApplicationManager.ATELIER.equalsIgnoreCase(gamemode))) {
-							showDialog(DIALOG_RENAME_MONSTER);
-						}else {
-							showDialog(DIALOG_RESULT_LEVEL);
-						}
+						showDialog(DIALOG_RESULT_LEVEL);
 					}
 				}
 			});
@@ -1317,11 +1132,7 @@ public class DrawChallengeActivity extends Activity {
 				public void onClick(View v) {
 					INTENTIONALLY_CLOSED_SECTION_UNLOCKED = true;
 					dialog.dismiss();
-					if(newrecord && !(ApplicationManager.ATELIER.equalsIgnoreCase(gamemode))) {
-						showDialog(DIALOG_RENAME_MONSTER);
-					}else {
-						showDialog(DIALOG_RESULT_LEVEL);
-					}
+					showDialog(DIALOG_RESULT_LEVEL);
 				}
 			});
         	break;
@@ -1336,11 +1147,7 @@ public class DrawChallengeActivity extends Activity {
 						if(unlockednextsection) {
 							showDialog(DIALOG_SECTION_UNLOCKED);
 						}else {
-							if(newrecord && !(ApplicationManager.ATELIER.equalsIgnoreCase(gamemode))) {
-								showDialog(DIALOG_RENAME_MONSTER);
-							}else {
-								showDialog(DIALOG_RESULT_LEVEL);
-							}
+							showDialog(DIALOG_RESULT_LEVEL);
 						}
 					}
 				}
@@ -1361,11 +1168,7 @@ public class DrawChallengeActivity extends Activity {
 					if(unlockednextsection) {
 						showDialog(DIALOG_SECTION_UNLOCKED);
 					}else {
-						if(newrecord && !(ApplicationManager.ATELIER.equalsIgnoreCase(gamemode))) {
-							showDialog(DIALOG_RENAME_MONSTER);
-						}else {
-							showDialog(DIALOG_RESULT_LEVEL);
-						}
+						showDialog(DIALOG_RESULT_LEVEL);
 					}
 				}
 			});
@@ -1383,11 +1186,7 @@ public class DrawChallengeActivity extends Activity {
 						}else if(unlockednextsection) {
 							showDialog(DIALOG_SECTION_UNLOCKED);
 						}else {
-							if(newrecord && !(ApplicationManager.ATELIER.equalsIgnoreCase(gamemode))) {
-								showDialog(DIALOG_RENAME_MONSTER);
-							}else {
-								showDialog(DIALOG_RESULT_LEVEL);
-							}
+							showDialog(DIALOG_RESULT_LEVEL);
 						}
 					}
 				}
@@ -1412,11 +1211,7 @@ public class DrawChallengeActivity extends Activity {
 					}else if(unlockednextsection) {
 						showDialog(DIALOG_SECTION_UNLOCKED);
 					}else {
-						if(newrecord && !(ApplicationManager.ATELIER.equalsIgnoreCase(gamemode))) {
-							showDialog(DIALOG_RENAME_MONSTER);
-						}else {
-							showDialog(DIALOG_RESULT_LEVEL);
-						}
+						showDialog(DIALOG_RESULT_LEVEL);
 					}
 				}
 			});
@@ -1436,11 +1231,7 @@ public class DrawChallengeActivity extends Activity {
 						}else if(unlockednextsection) {
 							showDialog(DIALOG_SECTION_UNLOCKED);
 						}else {
-							if(newrecord && !(ApplicationManager.ATELIER.equalsIgnoreCase(gamemode))) {
-								showDialog(DIALOG_RENAME_MONSTER);
-							}else {
-								showDialog(DIALOG_RESULT_LEVEL);
-							}
+							showDialog(DIALOG_RESULT_LEVEL);
 						}
 					}
 				}
@@ -1466,11 +1257,7 @@ public class DrawChallengeActivity extends Activity {
 					}else if(unlockednextsection) {
 						showDialog(DIALOG_SECTION_UNLOCKED);
 					}else {
-						if(newrecord && !(ApplicationManager.ATELIER.equalsIgnoreCase(gamemode))) {
-							showDialog(DIALOG_RENAME_MONSTER);
-						}else {
-							showDialog(DIALOG_RESULT_LEVEL);
-						}
+						showDialog(DIALOG_RESULT_LEVEL);
 					}
 				}
 			});
@@ -1653,31 +1440,13 @@ public class DrawChallengeActivity extends Activity {
 			TextView skip = (TextView)dialog.findViewById(R.id.skiptext);
 			skip.setTypeface(FontFactory.getFont1(getApplicationContext()));
             break;
-        case DIALOG_RENAME_MONSTER:
-        	// prepare the custom dialog
-			dialog = new Dialog(this);//con l'app context non si aprono
-			dialog.setCancelable(true);
-			dialog.setCanceledOnTouchOutside(false);
-			
-			dialog.setOnDismissListener(new OnDismissListener() {
-				public void onDismiss(DialogInterface dialog) {
-					showDialog(DIALOG_RESULT_LEVEL);
-				}
-			});
-			dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-			dialog.setContentView(R.layout.rename_dialog);
-			//dialog.setTitle("Custom Dialog");
-			dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialogbg);
-			
-            break;
         default:
             dialog = null;
         }
         return dialog;
     }
-  
-
-	protected void bloccaITasti(Vector<ImageView> tasti) {
+    
+    protected void bloccaITasti(Vector<ImageView> tasti) {
 		for(final ImageView iv:tasti) {
 			iv.setEnabled(false);
 		}
@@ -1708,8 +1477,7 @@ public class DrawChallengeActivity extends Activity {
 			countDownAnimation.setAnimationListener(new AnimationListener() {
 				
 				public void onAnimationStart(Animation animation) {
-					//SoundManager.playSound(SoundManager.SOUND_THREE, getApplicationContext(), false);
-					
+					SoundManager.playSound(SoundManager.SOUND_THREE, getApplicationContext(), false);
 				}
 				
 				public void onAnimationRepeat(Animation animation) {}
@@ -1724,8 +1492,7 @@ public class DrawChallengeActivity extends Activity {
 			countDownAnimation2.setAnimationListener(new AnimationListener() {
 				
 				public void onAnimationStart(Animation animation) {
-					//SoundManager.playSound(SoundManager.SOUND_TWO, getApplicationContext(), false);
-					
+					SoundManager.playSound(SoundManager.SOUND_TWO, getApplicationContext(), false);
 					countDownText.setImageResource(R.drawable.due);
 				}
 				
@@ -1741,16 +1508,14 @@ public class DrawChallengeActivity extends Activity {
 			countDownAnimation3.setAnimationListener(new AnimationListener() {
 				
 				public void onAnimationStart(Animation animation) {
-					//SoundManager.playSound(SoundManager.SOUND_ONE, getApplicationContext(), false);
-					
+					SoundManager.playSound(SoundManager.SOUND_ONE, getApplicationContext(), false);
 					countDownText.setImageResource(R.drawable.uno);
 				}
 				
 				public void onAnimationRepeat(Animation animation) {}
 				
 				public void onAnimationEnd(Animation animation) {
-					//SoundManager.playSound(SoundManager.SOUND_GO, getApplicationContext(), false);
-					
+					SoundManager.playSound(SoundManager.SOUND_GO, getApplicationContext(), false);
 					countDownText.setVisibility(View.INVISIBLE);
 					TimeManager.setStartTime(System.currentTimeMillis());
 				    playingTime = true;
@@ -1800,20 +1565,15 @@ public class DrawChallengeActivity extends Activity {
 		if(!TimeManager.isPaused()) {
 			synchronized (this) {
 				long remainingTime = TimeManager.getRemainingTime();
-				//Log.d("","REMAINING = "+remainingTime);
+				////Log.d("","REMAINING = "+remainingTime);
 				if(remainingTime <= 0 && playingTime) {
-					//Log.e("################# remainingTime <= 0 ","remainingTime <= 0");
+					////Log.e("################# remainingTime <= 0 ","remainingTime <= 0");
 					playingTime = false;
 					if(timeText != null) {
 						timeText.setTextAppearance(getApplicationContext(), R.style.TimeFont_Black);
 						timeText.setTypeface(FontFactory.getFont1(getApplicationContext()));
 						timeText.setText("");
 						fingerPaintDrawableView.setShowResult(true);
-						
-						//Forzo il flush sulla s pen canvas, altrimenti l'ultimo tratto non viene considerato
-						//se il dito è ancora giu
-						mCanvasView.addTouchEvent(MotionEvent.ACTION_POINTER_UP,0, 0, 1,CanvasView.METASTATE_PEN,0,0);
-						
 						fingerPaintDrawableView.startResultElaboration();
 						
 						//showDialog(DIALOG_RESULT_LEVEL);
@@ -1878,10 +1638,8 @@ public class DrawChallengeActivity extends Activity {
 							        	}else{
 							        		SoundManager.playSound(SoundManager.SOUND_NEGATIVE, getApplicationContext(), false);
 							        	}
-							        	
 							        	fingerPaintDrawableView.executeAmmo(randomX,randomY,getApplicationContext(),pixelSize,ammo);
-							        	mCanvasView.invalidate();//refresho
-							        	break;
+							            break;
 									}
 									return true;
 								}
@@ -1902,7 +1660,7 @@ public class DrawChallengeActivity extends Activity {
 					    	RelativeLayout.LayoutParams params5 = new RelativeLayout.LayoutParams(pixelSize, pixelSize);
 					        params5.leftMargin = randomX;
 					        params5.topMargin = randomY;					        
-					        //Log.d("coord "+pixelSize+" -- "+relativeLayoutFingerDrawable.getWidth() +" x "+relativeLayoutFingerDrawable.getHeight(),""+params5.leftMargin+" x "+params5.topMargin);
+					        ////Log.d("coord "+pixelSize+" -- "+relativeLayoutFingerDrawable.getWidth() +" x "+relativeLayoutFingerDrawable.getHeight(),""+params5.leftMargin+" x "+params5.topMargin);
 					        
 					        testImage.setLayoutParams(params5);
 					        testImage.startAnimation(rotAnim);
@@ -1945,7 +1703,7 @@ public class DrawChallengeActivity extends Activity {
         //Leggo il risultato migliore ottenuto fino ad ora
         int bestResult = fingerPaintDrawableView.getPicture().getBestResultEver(getApplicationContext(), gamemode);
         
-        if((bestResult < Integer.parseInt(percentage)) && atleastonestar) {//solo se si fa almeno una stella posso fare record
+        if(bestResult < Integer.parseInt(percentage)) {
         	newrecord = true;
         	fingerPaintDrawableView.getPicture().setBestResult(getApplicationContext(),gamemode,Integer.parseInt(percentage));
         }
@@ -2028,11 +1786,7 @@ public class DrawChallengeActivity extends Activity {
 			else if(unlockednextsection) {
 				showDialog(DIALOG_SECTION_UNLOCKED);
 			}else {
-				if(newrecord && !(ApplicationManager.ATELIER.equalsIgnoreCase(gamemode))) {
-					showDialog(DIALOG_RENAME_MONSTER);
-				}else{
-					showDialog(DIALOG_RESULT_LEVEL);
-				}
+				showDialog(DIALOG_RESULT_LEVEL);
 			}
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -2074,11 +1828,5 @@ public class DrawChallengeActivity extends Activity {
             }
         };
         t.start();
-        //FIX bug samsung processing during task manager
-        if(!hasFocus) {
-        	handlePausingGame();
-        }
     }
-    
-    
 }
