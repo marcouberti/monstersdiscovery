@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string name="app_name">Monsters Discovery</string>
+   <string name="experience">COINS</string>
+   <string name="textexit">QUIT THE GAME?</string>
+   <string name="addprobabilitytext">BUY THIS TRICK &#38; TRAP?</string>
+   <string name="sectionunlocked">SECTION UNLOCKED</string>
+   <string name="bonusunlocked">BONUS UNLOCKED</string>
+   <string name="ammounlocked">TRICK &#38; TRAP UNLOCKED</string>
+   <string name="ammounlocked2">YOU CAN BUY IT NOW!</string>
+   <string name="blocked">BLOKED</string>
+   <string name="price">PRICE</string>
+   <string name="skip">SKIP</string>
+   <string name="congratulation">CONGRATULATIONS!\nNOW TRY TO UNLOCK ALL BONUS MONSTERS \nGETTING THREE STARS ON ALL LEVELS.</string>
+
+   <string name="sviluppatoda">A GAME DEVELOPED BY INVENKTION</string>
+   <string name="seguici">FOLLOW US</string>
+   <string name="youcanrename">WOW! IT\'S A NEW RECORD! GIVE A NAME TO THIS MONSTER . . .</string>
+   
+   
+   <!-- NOMI DEI MOSTRI -->
+   <string name="atm1">Orangepiz</string>
+   <string name="atm2">Skyeye</string>
+   
+   <string name="w1m1">Poliglush</string>
+   <string name="w1m2">Fraug</string>
+   <string name="w1m3">Bulboon</string>
+   <string name="w1m4">Tuga</string>
+   <string name="w1m5">Pinchtee</string>
+   <string name="w1m6">Swoark</string>
+   <string name="w1m7">Legreems</string>
+   <string name="w1m8">Eggypile</string>
+   <string name="w1m9">Sgrooby</string>
+   <string name="w1m10">Pinna</string>
+   
+   <string name="w2m1">Drakor</string>
+   <string name="w2m2">Flemeeng</string>
+   <string name="w2m3">Thyrassus</string>
+   <string name="w2m4">Becourns</string>
+   <string name="w2m5">Eggy brid</string>
+   <string name="w2m6">Torcinus</string>
+   <string name="w2m7">Piggoon</string>
+   <string name="w2m8">Lacerd</string>
+   <string name="w2m9">Tribooch</string>
+   <string name="w2m10">Hammerz</string>
+   
+   <string name="w3m1">Squiwee</string>
+   <string name="w3m2">Ku</string>
+   <string name="w3m3">Bulos</string>
+   <string name="w3m4">Gorzilof</string>
+   <string name="w3m5">Ratscurbat</string>
+   <string name="w3m6">Rhoarg</string>
+   <string name="w3m7">Musclegrob</string>
+   <string name="w3m8">Moofles</string>
+   <string name="w3m9">Hu-ju-koo</string>
+   <string name="w3m10">Sheebar</string>
+   
+   <string name="w4m1">Blusquare</string>
+   <string name="w4m2">Monojump</string>
+   <string name="w4m3">Spazzinus</string>
+   <string name="w4m4">Pentalamp</string>
+   <string name="w4m5">Ovorobo</string>
+   <string name="w4m6">Trieyes</string>
+   <string name="w4m7">Pinkymum</string>
+   <string name="w4m8">Gozzus</string>
+   <string name="w4m9">Rollino</string>
+   <string name="w4m10">Robomedusa</string>
+   
+   <string name="w5m1">Crazykrest</string>
+   <string name="w5m2">Grassgnam</string>
+   <string name="w5m3">Bombopink</string>
+   <string name="w5m4">Squallor</string>
+   <string name="w5m5">Yellodog</string>
+   <string name="w5m6">Woodybriz</string>
+   <string name="w5m7">Augh</string>
+   <string name="w5m8">Housetiz</string>
+   <string name="w5m9">AhBello</string>
+   <string name="w5m10">Tritiger</string>
+   
+   <string name="wbm1">Dracula</string>
+   <string name="wbm2">Yeti</string>
+   <string name="wbm3">Centaur</string>
+   <string name="wbm4">Nessi</string>
+   <string name="wbm5">Hippogriph</string>
+  
+</resources>
