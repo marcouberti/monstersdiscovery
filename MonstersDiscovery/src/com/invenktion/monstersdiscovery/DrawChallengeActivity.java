@@ -3,6 +3,10 @@ package com.invenktion.monstersdiscovery;
 
 import java.util.Vector;
 
+import com.facebook.Session;
+import com.facebook.SessionState;
+import com.facebook.UiLifecycleHelper;
+import com.facebook.widget.FacebookDialog;
 import com.invenktion.monstersdiscovery.bean.AmmoBean;
 import com.invenktion.monstersdiscovery.bean.PictureBean;
 import com.invenktion.monstersdiscovery.bean.SectionArrayList;
@@ -67,6 +71,15 @@ public class DrawChallengeActivity extends Activity {
 	static final int DIALOG_FINISH_GAME = 6;
 	static final int DIALOG_INSTRUCTION = 7;
 	
+	//FACEBOOK
+	private UiLifecycleHelper uiHelper;
+	private Session.StatusCallback callback = new Session.StatusCallback() {
+        @Override
+        public void call(Session session, SessionState state, Exception exception) {
+            onSessionStateChange(session, state, exception);
+        }
+    };
+	
 	//boolean waiting = false;
 	
 	float DENSITY = 1.0f;
@@ -108,10 +121,19 @@ public class DrawChallengeActivity extends Activity {
 	
 	protected int tutorialStep = 0;//per mostrare le immagini di tutorial
 	
+	private void onSessionStateChange(Session session, SessionState state, Exception exception) {}
+	
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
+		
 		playingTime = false;
+		
+		//fb
+		if(uiHelper != null) {
+			uiHelper.onDestroy();
+		}
+		
 		//Rilascio le risorse Bitmap
 		if(fingerPaintDrawableView != null) {
 			fingerPaintDrawableView.recycleBitmaps();
@@ -133,9 +155,23 @@ public class DrawChallengeActivity extends Activity {
 	}
 
 	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		// TODO Auto-generated method stub
+		super.onSaveInstanceState(outState);
+		if(uiHelper != null) {
+			uiHelper.onSaveInstanceState(outState);
+		}
+	}
+	
+	@Override
 	protected void onPause() {
 		handlePausingGame();
+		
 		super.onPause();
+		
+		if(uiHelper != null) {
+			uiHelper.onPause();
+		}
 		//Spengo la musica solo se un'altra applicazione è davanti alla nostra (VOICE CALL, HOME Button, etc..)
 		/*
 		if(ActivityHelper.isApplicationBroughtToBackground(this)) {
@@ -151,7 +187,10 @@ public class DrawChallengeActivity extends Activity {
 		if(playingTime && TimeManager.isPaused()){
     		showDialog(DIALOG_PAUSE);
     	}
-		
+		//fb
+		if(uiHelper != null) {
+			uiHelper.onResume();
+		}
 		//Rilancio la musica se e solo se non è già attiva
 		//Questo ci permette di utilizzare la stessa traccia musicale tra Activity differenti, oltre
 		//al metodo presente nel onPause che controlla se siamo o no in background
@@ -213,6 +252,10 @@ public class DrawChallengeActivity extends Activity {
 
         double aspectRatio = (double)ApplicationManager.SCREEN_W / (double)ApplicationManager.SCREEN_H;
         //Log.d("ASPECT RATION",""+aspectRatio);
+        
+        //FACEBOOK
+        uiHelper = new UiLifecycleHelper(this,callback);
+        uiHelper.onCreate(savedInstanceState);
         
         //LayoutParams myparams = new RelativeLayout.LayoutParams(ApplicationManager.SCREEN_H/2, ApplicationManager.SCREEN_H/2);
         //fingerPaintDrawableView.setLayoutParams(myparams);
@@ -662,7 +705,7 @@ public class DrawChallengeActivity extends Activity {
         		textPercentage.setTypeface(FontFactory.getFont1(getApplicationContext()));  
         		textPercentage.setText(resultPercentage+" %");
         		
-        		int perc = Integer.parseInt(resultPercentage);
+        		final int perc = Integer.parseInt(resultPercentage);
         		
         		//Se sono al record mostro la targhetta di record
         		ImageView recordImage = (ImageView) dialog.findViewById(R.id.recordimage);
@@ -789,6 +832,30 @@ public class DrawChallengeActivity extends Activity {
 					});
         		}
         		
+        		//FACEBOOK SHARE BUTTON
+        		final String mostroName = fingerPaintDrawableView.getPicture().getTitle(getApplicationContext());
+        		final String mostroImmagineName = fingerPaintDrawableView.getPicture().getImmagineNome();
+        		ImageButton shareButton = (ImageButton) dialog.findViewById(R.id.share_button);
+                shareButton.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    	FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(DrawChallengeActivity.this)
+                    	.setApplicationName("Monsters Discovery")
+                    	.setDescription("I colored the monster "+mostroName+" at "+perc+"%")
+                        .setLink("https://play.google.com/store/apps/details?id=com.invenktion.monstersdiscovery")
+                        .setPicture("http://www.invenktion.com/MonstersDiscoveryweb/"+mostroImmagineName)
+                        .build();
+                        
+                		uiHelper.trackPendingDialogCall(shareDialog.present());
+                    	
+                    }
+                });
+                //Nascondo il bottone di SHARE SU FACEBOOK se l'app non è installata
+                if (!FacebookDialog.canPresentShareDialog(getApplicationContext(), 
+                        FacebookDialog.ShareDialogFeature.SHARE_DIALOG)) {
+                	LinearLayout fbContainer = (LinearLayout)dialog.findViewById(R.id.facebookContainer);
+                	fbContainer.setVisibility(View.GONE);
+                }
         		
         		//Animazione incremento dei crediti
         		if(!(ApplicationManager.ATELIER.equalsIgnoreCase(gamemode))) {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+   <string name="app_id">313003532171844</string>
    <string name="app_name">Monsters Discovery</string>
    <string name="experience">COINS</string>
    <string name="textexit">QUIT THE GAME?</string>
@@ -13,6 +14,7 @@
    <string name="skip">SKIP</string>
    <string name="congratulation">CONGRATULATIONS!\nNOW TRY TO UNLOCK ALL BONUS MONSTERS \nGETTING THREE STARS ON ALL LEVELS.</string>
 
+   <string name="condividiRisultatoSu">Share result on </string>
    <string name="sviluppatoda">A GAME DEVELOPED BY INVENKTION</string>
    <string name="seguici">FOLLOW US</string>
    <string name="youcanrename">WOW! IT\'S A NEW RECORD! GIVE A NAME TO THIS MONSTER . . .</string>

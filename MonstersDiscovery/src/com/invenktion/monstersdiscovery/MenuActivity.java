@@ -1,5 +1,10 @@
 package com.invenktion.monstersdiscovery;
 
+import com.facebook.Session;
+import com.facebook.SessionState;
+import com.facebook.UiLifecycleHelper;
+import com.facebook.widget.FacebookDialog;
+
 import com.invenktion.monstersdiscovery.core.AnimationFactory;
 import com.invenktion.monstersdiscovery.core.ApplicationManager;
 import com.invenktion.monstersdiscovery.core.FontFactory;
@@ -16,6 +21,7 @@ import com.invenktion.monstersdiscovery.view.FingerPaintDrawableView;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.KeyguardManager;
+import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -41,16 +47,26 @@ import android.view.View.OnTouchListener;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-public class MenuActivity extends Activity{
+public class MenuActivity extends Activity {
 	//Typeface font; 
 	float DENSITY = 1.0f;
 	
+	//FACEBOOK
+	private UiLifecycleHelper uiHelper;
+	private Session.StatusCallback callback = new Session.StatusCallback() {
+        @Override
+        public void call(Session session, SessionState state, Exception exception) {
+            onSessionStateChange(session, state, exception);
+        }
+    };
+
 	BroadcastReceiver mReceiver;
 	
 	static final int DIALOG_EXIT_APPLICATION = 0;
@@ -61,6 +77,10 @@ public class MenuActivity extends Activity{
 	
 	@Override
 	protected void onDestroy() {
+		//fb
+		if(uiHelper != null) {
+			uiHelper.onDestroy();
+		}
 		//Rilascio l'animazione sulla faccia di Jhonny
 		if(findViewById(R.id.facejhonny) != null) {
 			ImageView faceJhonny = ((ImageView)findViewById(R.id.facejhonny));
@@ -80,6 +100,15 @@ public class MenuActivity extends Activity{
 		}
 		//Log.e("MenuActivity","DESTROY MenuActivity ####################");
 		super.onDestroy();
+	}
+	
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		// TODO Auto-generated method stub
+		super.onSaveInstanceState(outState);
+		if(uiHelper != null) {
+			uiHelper.onSaveInstanceState(outState);
+		}
 	}
 	
 	//Crea il particolare dialog una volta sola
@@ -157,7 +186,10 @@ public class MenuActivity extends Activity{
 	@Override
 	protected void onResume() {
 		super.onResume();
-	
+		//fb
+		if(uiHelper != null) {
+			uiHelper.onResume();
+		}
 		//Rilancio la musica se e solo se non è già attiva
 		//Questo ci permette di utilizzare la stessa traccia musicale tra Activity differenti, oltre
 		//al metodo presente nel onPause che controlla se siamo o no in background
@@ -185,12 +217,17 @@ public class MenuActivity extends Activity{
 	@Override
 	protected void onPause() {
 		super.onPause();
+		if(uiHelper != null) {
+			uiHelper.onPause();
+		}
 		//Spengo la musica solo se un'altra applicazione è davanti alla nostra (VOICE CALL, HOME Button, etc..)
 		if(ActivityHelper.isApplicationBroughtToBackground(this)) {
 			SoundManager.pauseBackgroundMusic();
 		}
 	}
 
+	private void onSessionStateChange(Session session, SessionState state, Exception exception) {}
+	
 	@Override
 	protected void onStop() {
 		super.onStop();
@@ -224,6 +261,30 @@ public class MenuActivity extends Activity{
         
         FrameLayout frameLayout = (FrameLayout)findViewById(R.id.homelayout);
 
+        
+        //FACEBOOK
+        uiHelper = new UiLifecycleHelper(this,callback);
+        uiHelper.onCreate(savedInstanceState);
+        
+        ImageButton shareButton = (ImageButton) findViewById(R.id.share_button);
+        shareButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(MenuActivity.this)
+                .setLink("https://play.google.com/store/apps/details?id=com.invenktion.monstersdiscovery")
+                .setPicture("http://www.invenktion.com/images/device-2013-02-15-121148.png")
+                .build();
+                
+        		uiHelper.trackPendingDialogCall(shareDialog.present());
+            	
+            }
+        });
+        //Nascondo il bottone di SHARE SU FACEBOOK se l'app non è installata
+        if (!FacebookDialog.canPresentShareDialog(getApplicationContext(), 
+                FacebookDialog.ShareDialogFeature.SHARE_DIALOG)) {
+        	shareButton.setVisibility(View.INVISIBLE);
+        }
+        
         //ImageView mascotteImage = (ImageView)findViewById(R.id.mascotteimage);
         //mascotteImage.setLayoutParams(new LinearLayout.LayoutParams((int)(ApplicationManager.SCREEN_H/2.5), (int)(ApplicationManager.SCREEN_H/2.5)));
         
