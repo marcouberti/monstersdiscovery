@@ -1,9 +1,14 @@
 package com.invenktion.monstersdiscovery;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
 import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.UiLifecycleHelper;
 import com.facebook.widget.FacebookDialog;
+import com.facebook.widget.LoginButton;
 
 import com.invenktion.monstersdiscovery.core.AnimationFactory;
 import com.invenktion.monstersdiscovery.core.ApplicationManager;
@@ -55,18 +60,59 @@ import android.widget.TextView;
 
 
 public class MenuActivity extends Activity {
+	
+	private static final String TAG = "MenuActivity";
 	//Typeface font; 
 	float DENSITY = 1.0f;
 	
+	private LoginButton loginButton;
 	//FACEBOOK
+	private static final List<String> PERMISSIONS = Arrays.asList("publish_actions");
 	private UiLifecycleHelper uiHelper;
-	private Session.StatusCallback callback = new Session.StatusCallback() {
-        @Override
-        public void call(Session session, SessionState state, Exception exception) {
-            onSessionStateChange(session, state, exception);
-        }
-    };
+	private Session.StatusCallback callback = 
+	    new Session.StatusCallback() {
+	    @Override
+	    public void call(Session session, 
+	            SessionState state, Exception exception) {
+	        onSessionStateChange(session, state, exception);
+	    }
+	};
 
+	private boolean isSubsetOf(Collection<String> subset, Collection<String> superset) {
+		for (String string : subset) {
+			if (!superset.contains(string)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	private void onSessionStateChange(Session session, SessionState state, Exception exception) {
+	    if (state.isOpened()) {
+	        Log.i(TAG, "Logged in...");
+	        // Check for publish permissions    
+	        List<String> permissions = session.getPermissions();
+	        if (!isSubsetOf(PERMISSIONS, permissions)) {
+	            Session.NewPermissionsRequest newPermissionsRequest = new Session
+	                    .NewPermissionsRequest(this, PERMISSIONS);
+	        session.requestNewPublishPermissions(newPermissionsRequest);
+	            return;
+	        }
+	    } else if (state.isClosed()) {
+	        Log.i(TAG, "Logged out...");
+	    }
+	}
+
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+	    super.onSaveInstanceState(outState);
+	    try{
+	    	uiHelper.onSaveInstanceState(outState);
+	    }catch (Exception e) {
+			e.printStackTrace();//altrimenti crashava
+		}
+	}
+	
 	BroadcastReceiver mReceiver;
 	
 	static final int DIALOG_EXIT_APPLICATION = 0;
@@ -78,8 +124,10 @@ public class MenuActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		//fb
-		if(uiHelper != null) {
+		try{
 			uiHelper.onDestroy();
+		}catch (Exception e) {
+			e.printStackTrace();//altrimenti crashava
 		}
 		//Rilascio l'animazione sulla faccia di Jhonny
 		if(findViewById(R.id.facejhonny) != null) {
@@ -100,15 +148,6 @@ public class MenuActivity extends Activity {
 		}
 		//Log.e("MenuActivity","DESTROY MenuActivity ####################");
 		super.onDestroy();
-	}
-	
-	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		// TODO Auto-generated method stub
-		super.onSaveInstanceState(outState);
-		if(uiHelper != null) {
-			uiHelper.onSaveInstanceState(outState);
-		}
 	}
 	
 	//Crea il particolare dialog una volta sola
@@ -184,11 +223,23 @@ public class MenuActivity extends Activity {
 	}
 
 	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    super.onActivityResult(requestCode, resultCode, data);
+	    try{
+	    	uiHelper.onActivityResult(requestCode, resultCode, data);
+	    }catch (Exception e) {
+			e.printStackTrace();//altrimenti crashava
+		}
+	}
+	
+	@Override
 	protected void onResume() {
 		super.onResume();
 		//fb
-		if(uiHelper != null) {
+		try {
 			uiHelper.onResume();
+		}catch (Exception e) {
+			e.printStackTrace();//altrimenti crashava
 		}
 		//Rilancio la musica se e solo se non è già attiva
 		//Questo ci permette di utilizzare la stessa traccia musicale tra Activity differenti, oltre
@@ -217,8 +268,10 @@ public class MenuActivity extends Activity {
 	@Override
 	protected void onPause() {
 		super.onPause();
-		if(uiHelper != null) {
+		try{
 			uiHelper.onPause();
+		}catch (Exception e) {
+			e.printStackTrace();//altrimenti crashava
 		}
 		//Spengo la musica solo se un'altra applicazione è davanti alla nostra (VOICE CALL, HOME Button, etc..)
 		if(ActivityHelper.isApplicationBroughtToBackground(this)) {
@@ -226,13 +279,6 @@ public class MenuActivity extends Activity {
 		}
 	}
 
-	private void onSessionStateChange(Session session, SessionState state, Exception exception) {}
-	
-	@Override
-	protected void onStop() {
-		super.onStop();
-	}
-	
 	private boolean checkApplicationKill() {
 		if(ApplicationManager.APPLICATION_KILLED == null) {
 			Intent myIntent = new Intent(MenuActivity.this, SplashScreenActivity.class);
@@ -261,30 +307,11 @@ public class MenuActivity extends Activity {
         
         FrameLayout frameLayout = (FrameLayout)findViewById(R.id.homelayout);
 
-        
         //FACEBOOK
-        uiHelper = new UiLifecycleHelper(this,callback);
+        uiHelper = new UiLifecycleHelper(this, callback);
         uiHelper.onCreate(savedInstanceState);
-        
-        ImageButton shareButton = (ImageButton) findViewById(R.id.share_button);
-        shareButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            	FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(MenuActivity.this)
-                .setLink("https://play.google.com/store/apps/details?id=com.invenktion.monstersdiscovery")
-                .setPicture("http://www.invenktion.com/images/device-2013-02-15-121148.png")
-                .build();
-                
-        		uiHelper.trackPendingDialogCall(shareDialog.present());
-            	
-            }
-        });
-        //Nascondo il bottone di SHARE SU FACEBOOK se l'app non è installata
-        if (!FacebookDialog.canPresentShareDialog(getApplicationContext(), 
-                FacebookDialog.ShareDialogFeature.SHARE_DIALOG)) {
-        	shareButton.setVisibility(View.INVISIBLE);
-        }
-        
+
+        loginButton = (LoginButton)findViewById(R.id.authButton);
         //ImageView mascotteImage = (ImageView)findViewById(R.id.mascotteimage);
         //mascotteImage.setLayoutParams(new LinearLayout.LayoutParams((int)(ApplicationManager.SCREEN_H/2.5), (int)(ApplicationManager.SCREEN_H/2.5)));
         

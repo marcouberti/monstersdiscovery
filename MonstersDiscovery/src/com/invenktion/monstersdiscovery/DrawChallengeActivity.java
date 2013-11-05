@@ -1,12 +1,22 @@
 package com.invenktion.monstersdiscovery;
 
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 import java.util.Vector;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.facebook.FacebookRequestError;
+import com.facebook.HttpMethod;
+import com.facebook.Request;
+import com.facebook.RequestAsyncTask;
+import com.facebook.Response;
 import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.UiLifecycleHelper;
-import com.facebook.widget.FacebookDialog;
 import com.invenktion.monstersdiscovery.bean.AmmoBean;
 import com.invenktion.monstersdiscovery.bean.PictureBean;
 import com.invenktion.monstersdiscovery.bean.SectionArrayList;
@@ -26,6 +36,7 @@ import android.app.Activity;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.DialogInterface.OnDismissListener;
 
 import android.graphics.Bitmap;
@@ -59,9 +70,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DrawChallengeActivity extends Activity {
     
+	private static final String TAG = "DrawChallengeActivity";
+	
 	static final int DIALOG_RESULT_LEVEL = 0;
 	static final int DIALOG_START_LEVEL = 1;
 	static final int DIALOG_PAUSE = 2;
@@ -71,15 +85,11 @@ public class DrawChallengeActivity extends Activity {
 	static final int DIALOG_FINISH_GAME = 6;
 	static final int DIALOG_INSTRUCTION = 7;
 	
-	//FACEBOOK
+	//facebook
 	private UiLifecycleHelper uiHelper;
-	private Session.StatusCallback callback = new Session.StatusCallback() {
-        @Override
-        public void call(Session session, SessionState state, Exception exception) {
-            onSessionStateChange(session, state, exception);
-        }
-    };
-	
+	private static final List<String> PERMISSIONS = Arrays.asList("publish_actions");
+	private static final String PENDING_PUBLISH_KEY = "pendingPublishReauthorization";
+	private boolean pendingPublishReauthorization = false;
 	//boolean waiting = false;
 	
 	float DENSITY = 1.0f;
@@ -121,17 +131,35 @@ public class DrawChallengeActivity extends Activity {
 	
 	protected int tutorialStep = 0;//per mostrare le immagini di tutorial
 	
-	private void onSessionStateChange(Session session, SessionState state, Exception exception) {}
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+	    super.onSaveInstanceState(outState);
+	    try{
+	    	uiHelper.onSaveInstanceState(outState);
+	    }catch (Exception e) {
+			e.printStackTrace();//altrimenti crashava
+		}
+	}
 	
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    super.onActivityResult(requestCode, resultCode, data);
+	    try{
+	    	uiHelper.onActivityResult(requestCode, resultCode, data);
+	    }catch (Exception e) {
+			e.printStackTrace();//altrimenti crashava
+		}
+	}
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
 		
 		playingTime = false;
-		
 		//fb
-		if(uiHelper != null) {
+		try{
 			uiHelper.onDestroy();
+		}catch (Exception e) {
+			e.printStackTrace();//altrimenti crashava
 		}
 		
 		//Rilascio le risorse Bitmap
@@ -154,14 +182,6 @@ public class DrawChallengeActivity extends Activity {
 		System.gc();
 	}
 
-	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		// TODO Auto-generated method stub
-		super.onSaveInstanceState(outState);
-		if(uiHelper != null) {
-			uiHelper.onSaveInstanceState(outState);
-		}
-	}
 	
 	@Override
 	protected void onPause() {
@@ -169,8 +189,10 @@ public class DrawChallengeActivity extends Activity {
 		
 		super.onPause();
 		
-		if(uiHelper != null) {
+		try{
 			uiHelper.onPause();
+		}catch (Exception e) {
+			e.printStackTrace();//altrimenti crashava
 		}
 		//Spengo la musica solo se un'altra applicazione è davanti alla nostra (VOICE CALL, HOME Button, etc..)
 		/*
@@ -188,8 +210,10 @@ public class DrawChallengeActivity extends Activity {
     		showDialog(DIALOG_PAUSE);
     	}
 		//fb
-		if(uiHelper != null) {
+		try{
 			uiHelper.onResume();
+		}catch (Exception e) {
+			e.printStackTrace();//altrimenti crashava
 		}
 		//Rilancio la musica se e solo se non è già attiva
 		//Questo ci permette di utilizzare la stessa traccia musicale tra Activity differenti, oltre
@@ -230,6 +254,23 @@ public class DrawChallengeActivity extends Activity {
 		return false;
 	}
 	
+	private void onSessionStateChange(Session session, SessionState state, Exception exception) {
+	    if (state.isOpened()) {
+	        Log.i(TAG, "Logged in...");
+	        
+	    } else if (state.isClosed()) {
+	        Log.i(TAG, "Logged out...");
+	        
+	    }
+	}
+	
+	private Session.StatusCallback callback = new Session.StatusCallback() {
+	    @Override
+	    public void call(Session session, SessionState state, Exception exception) {
+	        onSessionStateChange(session, state, exception);
+	    }
+	};
+	
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -245,6 +286,10 @@ public class DrawChallengeActivity extends Activity {
         	////Log.d("GAMEMODE ######",gamemode);
         }
         
+        //FACEBOOK
+        uiHelper = new UiLifecycleHelper(this, callback);
+        uiHelper.onCreate(savedInstanceState);
+        
         this.DENSITY = getApplicationContext().getResources().getDisplayMetrics().density;
         //backgroundDrawableView = new DynamicBackgroundDrawableView(this,R.drawable.desktop3,true);
         //glassPane = new GlassPaneDrawableView(this);
@@ -252,11 +297,7 @@ public class DrawChallengeActivity extends Activity {
 
         double aspectRatio = (double)ApplicationManager.SCREEN_W / (double)ApplicationManager.SCREEN_H;
         //Log.d("ASPECT RATION",""+aspectRatio);
-        
-        //FACEBOOK
-        uiHelper = new UiLifecycleHelper(this,callback);
-        uiHelper.onCreate(savedInstanceState);
-        
+
         //LayoutParams myparams = new RelativeLayout.LayoutParams(ApplicationManager.SCREEN_H/2, ApplicationManager.SCREEN_H/2);
         //fingerPaintDrawableView.setLayoutParams(myparams);
         relativeLayoutFingerDrawable = new RelativeLayout(getApplicationContext());
@@ -832,31 +873,6 @@ public class DrawChallengeActivity extends Activity {
 					});
         		}
         		
-        		//FACEBOOK SHARE BUTTON
-        		final String mostroName = fingerPaintDrawableView.getPicture().getTitle(getApplicationContext());
-        		final String mostroImmagineName = fingerPaintDrawableView.getPicture().getImmagineNome();
-        		ImageButton shareButton = (ImageButton) dialog.findViewById(R.id.share_button);
-                shareButton.setOnClickListener(new OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    	FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(DrawChallengeActivity.this)
-                    	.setApplicationName("Monsters Discovery")
-                    	.setDescription("I colored the monster "+mostroName+" at "+perc+"%")
-                        .setLink("https://play.google.com/store/apps/details?id=com.invenktion.monstersdiscovery")
-                        .setPicture("http://www.invenktion.com/MonstersDiscoveryweb/"+mostroImmagineName)
-                        .build();
-                        
-                		uiHelper.trackPendingDialogCall(shareDialog.present());
-                    	
-                    }
-                });
-                //Nascondo il bottone di SHARE SU FACEBOOK se l'app non è installata
-                if (!FacebookDialog.canPresentShareDialog(getApplicationContext(), 
-                        FacebookDialog.ShareDialogFeature.SHARE_DIALOG)) {
-                	LinearLayout fbContainer = (LinearLayout)dialog.findViewById(R.id.facebookContainer);
-                	fbContainer.setVisibility(View.GONE);
-                }
-        		
         		//Animazione incremento dei crediti
         		if(!(ApplicationManager.ATELIER.equalsIgnoreCase(gamemode))) {
         			if(atleastonestar){//i crediti incrementano solo se si è raggiunta almeno una STELLA
@@ -886,6 +902,69 @@ public class DrawChallengeActivity extends Activity {
 		        		}.start();
 	        		}
         		}
+        		//FACEBOOK pubblico su bacheca utente i risultati di gioco
+        		try{
+        			Session session = Session.getActiveSession();
+        			//pubblico solo ai nuovi record (ossia almeno una volta per quadro nuovo durante il gioco arcade)
+        		    if (newrecord && session != null && !session.isClosed()){
+
+        		        // Check for publish permissions    
+        		        List<String> permissions = session.getPermissions();
+        		        if (!isSubsetOf(PERMISSIONS, permissions)) {
+        		            pendingPublishReauthorization = true;
+        		            Session.NewPermissionsRequest newPermissionsRequest = new Session
+        		                    .NewPermissionsRequest(this, PERMISSIONS);
+        		        session.requestNewPublishPermissions(newPermissionsRequest);
+        		            return;
+        		        }
+        		        String nomeQuadro = fingerPaintDrawableView.getPicture().getTitle(getApplicationContext());
+        		        String nomeImmagine = fingerPaintDrawableView.getPicture().getImmagineNome();
+        		        Bundle postParams = new Bundle();
+        		        postParams.putString("name", "Monsters Discovery");
+        		        postParams.putString("caption", "New record!");
+        		        postParams.putString("description", "Discovered "+nomeQuadro+" monster with a new record of "+perc+"%");
+        		        postParams.putString("link", "https://play.google.com/store/apps/details?id=com.invenktion.monstersdiscovery");
+        		        postParams.putString("picture", "http://www.invenktion.com/MonstersDiscoveryweb/"+nomeImmagine);
+
+        		        Request.Callback callback= new Request.Callback() {
+        		            public void onCompleted(Response response) {
+        		            	try {
+	        		                JSONObject graphResponse = response
+	        		                                           .getGraphObject()
+	        		                                           .getInnerJSONObject();
+	        		                String postId = null;
+	        		                try {
+	        		                    postId = graphResponse.getString("id");
+	        		                } catch (JSONException e) {
+	        		                    Log.i(TAG,
+	        		                        "JSON error "+ e.getMessage());
+	        		                }
+	        		                FacebookRequestError error = response.getError();
+	        		                if (error != null) {
+	        		                    Toast.makeText(DrawChallengeActivity.this.getApplicationContext(),
+	        		                         error.getErrorMessage(),
+	        		                         Toast.LENGTH_SHORT).show();
+	        		                    } else {
+	        		                    	/*
+	        		                        Toast.makeText(DrawChallengeActivity.this
+	        		                             .getApplicationContext(), 
+	        		                             "Facebook post send with success",
+	        		                             Toast.LENGTH_SHORT).show();
+	        		                             */
+        		                }
+        		            	}catch(Exception e){e.printStackTrace();}
+        		            }
+        		        };
+
+        		        Request request = new Request(session, "me/feed", postParams, 
+        		                              HttpMethod.POST, callback);
+
+        		        RequestAsyncTask task = new RequestAsyncTask(request);
+        		        task.execute();
+        		    }
+        	    }catch(Exception e){
+        	    	e.printStackTrace();
+        	    }
         	}
             break;
         case DIALOG_SECTION_UNLOCKED:
@@ -1059,6 +1138,15 @@ public class DrawChallengeActivity extends Activity {
             //dialog = null;
         }
     };
+    
+    private boolean isSubsetOf(Collection<String> subset, Collection<String> superset) {
+        for (String string : subset) {
+            if (!superset.contains(string)) {
+                return false;
+            }
+        }
+        return true;
+    }
     
     //Crea il particolare dialog una volta sola
     //Per riconfigurarlo usare onPrepareDialog
