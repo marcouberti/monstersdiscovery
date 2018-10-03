@@ -1,0 +1,1902 @@
+[
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_btn_1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/btn_1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_unlockedammo.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/unlockedammo.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_lemon.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/lemon.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_unlockedgame.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/unlockedgame.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster10_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster10_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_powershot.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/powershot.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_custom_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster6_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster6_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_ciliegie.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/ciliegie.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_wb_monster2_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/wb_monster2_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_ciliegie_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/ciliegie_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_col1mask.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/col1mask.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_fronte5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/fronte5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_terremotoanimation.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/terremotoanimation.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_custom_pause_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/custom_pause_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster6.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster6.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_sectionschoose.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/sectionschoose.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/generated/res/pngs/debug/drawable-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tela2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tela2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_atelier.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/atelier.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_lucchetto.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/lucchetto.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_arcadechooselevel.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/arcadechooselevel.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster9_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster9_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tricktooexpensive.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tricktooexpensive.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_unlockedsection.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/unlockedsection.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_cocco.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/cocco.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_lemon_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/lemon_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster1_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster1_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_wb_monster1_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/wb_monster1_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_unlockedsection.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/unlockedsection.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_atelier.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/atelier.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_wb_monster3_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/wb_monster3_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_macchiamosca.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/macchiamosca.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_ammo_instruction_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/ammo_instruction_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_col1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/col1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_gommasize4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/gommasize4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster10.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster10.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_ammolist.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/ammolist.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_fronteatelier.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/fronteatelier.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_custom_pause_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/custom_pause_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster8.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster8.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster3_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster3_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_sectionschoose.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/sectionschoose.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_invenktionbig.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/invenktionbig.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_aterlier1_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/aterlier1_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/raw_one.mp3.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/raw/one.mp3"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_uva.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/uva.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tela4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tela4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster9.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster9_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster9_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec3locked.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec3locked.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster10_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster10_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_aterlier2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/aterlier2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_custom_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_arma1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/arma1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_gb_fronte.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/gb_fronte.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/raw_three.mp3.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/raw/three.mp3"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_wb_monster4_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/wb_monster4_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_jhonnybrush_9.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/jhonnybrush_9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_colorchooseanimation.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/colorchooseanimation.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_col5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/col5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_gommasize2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/gommasize2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_unlockedbonus.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/unlockedbonus.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_newrecordovershootinterpolator.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/newrecordovershootinterpolator.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec3storyboard.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec3storyboard.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_unlockedammo.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/unlockedammo.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_unlockedbonus.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/unlockedbonus.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_fronte.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/fronte.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_exit_application_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/exit_application_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_ammorotationset.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/ammorotationset.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_rotationset5.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/rotationset5.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_plus_dialog.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/plus_dialog.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_arma6.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/arma6.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_arcadechooselevel.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/arcadechooselevel.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_splashscreen.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/splashscreen.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_scissor.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/scissor.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster9.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec4storyboard.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec4storyboard.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/raw_plaf.mp3.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/raw/plaf.mp3"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster9.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/raw_coins.mp3.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/raw/coins.mp3"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster5_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster5_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_unlockedsection.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/unlockedsection.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/generated/res/pngs/debug/drawable-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_rename_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/rename_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_cocco_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/cocco_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_col2mask.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/col2mask.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_telabonus.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/telabonus.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster4_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster4_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster9_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster9_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_macchiaink.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/macchiaink.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_aterlier2_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/aterlier2_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_col3mask.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/col3mask.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec2presentation.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec2presentation.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_custom_start_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/custom_start_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_unlockedgame.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/unlockedgame.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster6_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster6_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_custom_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster7_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster7_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sfondostellare.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sfondostellare.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_exit_application_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/exit_application_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_credits.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/credits.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_col4mask.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/col4mask.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_exit_application_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/exit_application_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_jhonnybrushfull_8.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/jhonnybrushfull_8.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster10.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster10.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster2_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster2_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_banconote.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/banconote.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tre.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tre.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_storyboard_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/storyboard_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_splashscreen.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/splashscreen.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_splashscreen.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/splashscreen.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_diablo.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/diablo.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_custom_pause_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/custom_pause_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_arma4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/arma4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster5_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster5_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_storyboard_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/storyboard_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/layout-v16/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_notification_template_custom_big.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/layout/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_rename_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/rename_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tavolozzavuota.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tavolozzavuota.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_wb_monster5_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/wb_monster5_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_unlockedammo.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/unlockedammo.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_atelier.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/atelier.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_traptooexpensive.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/traptooexpensive.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster10.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster10.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_colorchooseanimation2.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/colorchooseanimation2.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_ammo4instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/ammo4instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster8.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster8.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_storyboard_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/storyboard_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster2_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster2_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_arma5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/arma5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_ammo_instruction_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/ammo_instruction_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_spacegun.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/spacegun.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_wb_monster3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/wb_monster3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_credits.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/credits.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_btn_avanti.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/btn_avanti.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_arma2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/arma2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_ammo5instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/ammo5instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_tutorial_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/tutorial_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_jhonnybrushfull_9.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/jhonnybrushfull_9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_gplus.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/gplus.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/raw_positive.mp3.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/raw/positive.mp3"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_ammo_instruction_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/ammo_instruction_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster4_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster4_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_wb_monster2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/wb_monster2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_gommasize1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/gommasize1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_ammo1instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/ammo1instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster10.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster10.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec1presentation.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec1presentation.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_facebook.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/facebook.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster7.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster7.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/generated/res/pngs/debug/drawable-ldpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_ammolist.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/ammolist.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_jhonnyfaceanimation.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/jhonnyfaceanimation.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_home.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/home.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_home_face.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/home_face.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster4_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster4_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster7.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster7.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_wb_monster1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/wb_monster1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster10_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster10_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster6.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster6.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_search.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-mdpi/ic_action_search.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster6.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster6.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_home.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/home.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_due.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/due.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_ammo_instruction_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/ammo_instruction_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_ammo8instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/ammo8instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_notification_template_part_time.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster8_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster8_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_credits.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/credits.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_credits.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/credits.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/raw_stamp.mp3.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/raw/stamp.mp3"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_br3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/br3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_rotationset.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/rotationset.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_arma3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/arma3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_unlockedgame.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/unlockedgame.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_uva_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/uva_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_transparent.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/transparent.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster3_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster3_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_antiammo1instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/antiammo1instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_btn_refresh.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/btn_refresh.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_fblogo.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/fblogo.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_rotationset3.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/rotationset3.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tricktrapblocked.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tricktrapblocked.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_rename_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/rename_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster2_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster2_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster1_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster1_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/raw_song.mp3.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/raw/song.mp3"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_home.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/home.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster9_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster9_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_rename_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/rename_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_jhonnybrush7.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/jhonnybrush7.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_atelier.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/atelier.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_soundon.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/soundon.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_btn_yes.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/btn_yes.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_check.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/check.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_rotationset2.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/rotationset2.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_exit_application_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/exit_application_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster2_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster2_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_antiammo8instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/antiammo8instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_btn_menu.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/btn_menu.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_splashscreen.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/splashscreen.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tela3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tela3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_home_logo_k.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/home_logo_k.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_atelier.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/atelier.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_gommasize5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/gommasize5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_tutorial_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/tutorial_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster7.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster7.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/raw_flush.mp3.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/raw/flush.mp3"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec2locked.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec2locked.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_custom_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_br4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/br4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_storyboard_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/storyboard_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_btn_start.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/btn_start.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster10.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster10.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_dialogbg.9.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/dialogbg.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_ammolist.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/ammolist.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_col2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/col2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/raw_go.mp3.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/raw/go.mp3"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_gb_retro.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/gb_retro.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_decrease.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/decrease.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_antiammo7instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/antiammo7instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_col4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/col4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster10_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster10_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_jhonnybrushfull.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/jhonnybrushfull.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_antiammo5instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/antiammo5instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_increase.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/increase.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_fronte4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/fronte4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster3_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster3_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster1_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster1_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_credits.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/credits.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tela1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tela1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_home1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/home1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_search.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-hdpi/ic_action_search.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec5locked.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec5locked.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_rotationset4.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/rotationset4.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster9_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster9_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_antiammo6instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/antiammo6instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_add_weapon_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/add_weapon_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_storyboard_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/storyboard_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_btn_2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/btn_2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_nuclear.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/nuclear.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_twitter.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/twitter.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster8_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster8_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster6_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster6_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster8.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster8.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster3_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster3_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_unlockedsection.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/unlockedsection.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec1storyboard.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec1storyboard.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster1_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster1_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_br2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/br2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_mix.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/mix.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_antiammo2instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/antiammo2instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_col5mask.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/col5mask.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster5_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster5_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_add_weapon_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/add_weapon_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec2storyboard.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec2storyboard.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_unlockedammo.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/unlockedammo.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_unlockedbonus.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/unlockedbonus.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_levelselectionanimation.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/levelselectionanimation.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tutorial1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tutorial1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_tutorial_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/tutorial_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_unlockedgame.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/unlockedgame.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tela.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tela.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_arma7.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/arma7.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable_notification_bg.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tela5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tela5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_antiammo4instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/antiammo4instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_aterlier1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/aterlier1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_custom_start_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/custom_start_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_splashscreen.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/splashscreen.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_fondo.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/fondo.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_ammolist.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/ammolist.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_bomb.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/bomb.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_gommasize3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/gommasize3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_timetrick.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/timetrick.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_exit_application_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/exit_application_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster6_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster6_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster9.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_bonuspresentation.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/bonuspresentation.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_wb_monster4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/wb_monster4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec5storyboard.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec5storyboard.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_telaatelier.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/telaatelier.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster1_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster1_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster8_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster8_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_coins.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/coins.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_quarto_stato_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/quarto_stato_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_ammo2instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/ammo2instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_unlockedgame.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/unlockedgame.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_unlockedammo.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/unlockedammo.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_notification_action.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_gomma_size_1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/gomma_size_1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_persistence_memory_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/persistence_memory_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster7_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster7_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster3_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster3_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster2_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster2_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_persistence_memory.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/persistence_memory.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sfondo5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sfondo5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_search.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-xhdpi/ic_action_search.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sfondobonus.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sfondobonus.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_smarje.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/smarje.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_add_weapon_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/add_weapon_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sfondo4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sfondo4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tutorial4.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tutorial4.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster9.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_credits.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/credits.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_ammo6instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/ammo6instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_plasmanetor.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/plasmanetor.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_add_weapon_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/add_weapon_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_custom_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_home.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/home.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_notification_template_part_chronometer.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sfondo3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sfondo3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_sectionschoose.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/sectionschoose.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tutorial3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tutorial3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_ammo7instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/ammo7instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_logo.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/logo.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec4locked.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec4locked.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_arcadechooselevel.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/arcadechooselevel.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster6.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster6.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_wb_monster5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/wb_monster5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_zeze.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/zeze.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_stella_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/stella_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_stella.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/stella.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_countdownanimation.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/countdownanimation.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec1locked.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec1locked.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_trickbg.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/trickbg.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/raw_whoosh.mp3.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/raw/whoosh.mp3"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/raw_two.mp3.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/raw/two.mp3"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_ammo_instruction_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/ammo_instruction_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec5presentation.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec5presentation.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_fronte1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/fronte1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster7_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster7_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_tutorial_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/tutorial_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_sectionschoose.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/sectionschoose.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tutorial5.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tutorial5.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster8.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster8.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster7_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster7_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster10_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster10_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_mspinner.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/mspinner.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sfondo1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sfondo1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster5_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster5_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_unlockedbonus.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/unlockedbonus.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_stella_black_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/stella_black_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tutorial2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tutorial2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_tutorial_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/tutorial_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_btn_no.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/btn_no.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_unlockedbonus.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/unlockedbonus.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec3presentation.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec3presentation.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster8.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster8.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster4_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster4_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tela_coperta.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tela_coperta.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster8_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster8_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_shurikens.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/shurikens.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_home.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/home.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_btn_left_black.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/btn_left_black.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_arma8.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/arma8.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_newrecord.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/newrecord.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_cutter.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/cutter.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster8_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster8_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_sectionschoose.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/sectionschoose.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_antiammo3instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/antiammo3instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_fronte3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/fronte3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_custom_start_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/custom_start_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_vorticeanimation.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/vorticeanimation.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_tela_coperta_bonus.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/tela_coperta_bonus.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_ammolist.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/ammolist.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_unlockedsection.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/unlockedsection.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_arcadechooselevel.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/arcadechooselevel.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_notification_action_tombstone.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_bjor.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/bjor.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_trapbg.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/trapbg.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_soundoff.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/soundoff.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster6.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster6.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/raw_negative.mp3.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/raw/negative.mp3"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_fronte2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/fronte2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_btn_right.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/btn_right.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_jhonnybrush_10.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/jhonnybrush_10.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_custom_start_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/custom_start_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_ammo3instruction.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/ammo3instruction.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large_custom_start_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large/custom_start_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sec4presentation.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sec4presentation.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_btn_3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/btn_3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-xlarge_rename_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-xlarge/rename_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster4_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster4_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_add_weapon_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/add_weapon_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_btn_right_black.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/btn_right_black.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_spinuz.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/spinuz.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_sfondo2.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/sfondo2.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster7_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster7_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_missile.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/missile.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster7.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster7.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout_custom_pause_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout/custom_pause_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-normal_custom_pause_dialog.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-normal/custom_pause_dialog.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w2_monster7.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w2_monster7.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/anim_hoverenteranimation.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/anim/hoverenteranimation.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_col3.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/col3.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster6_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster6_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/layout-large-xhdpi_arcadechooselevel.xml.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/layout-large-xhdpi/arcadechooselevel.xml"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/Marco/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e53da6816132554a8933316d41feaa6c/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_record.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/record.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_uno.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/uno.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w1_monster1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w1_monster1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_frontebonus.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/frontebonus.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_stella_black.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/stella_black.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w5_monster1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w5_monster1.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w4_monster5_tr.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w4_monster5_tr.png"
+    },
+    {
+        "merged": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/build/intermediates/res/merged/debug/drawable-nodpi_w3_monster1.png.flat",
+        "source": "/Users/Marco/workspace/app-android/MonstersDiscovery/app/src/main/res/drawable-nodpi/w3_monster1.png"
+    }
+]
