@@ -1,5 +1,5 @@
-Monsters Discovery game for Samsung Galaxy Note 
+Monsters Discovery game
 =================
 
 Android game. Monsters Discovery is an Android native drawing game.
-This project runs only on Samsung devices provided with the SPen.
+NOTE: the google play version without the SPen SDK is into the "googleplay" branch.
